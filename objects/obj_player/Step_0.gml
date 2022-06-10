@@ -33,16 +33,23 @@ ctrl_yaxis_check = ctrl_down_check - ctrl_up_check;
 invincibility_timer = max(0, invincibility_timer-1);
 grounded = (yvel >= 0 && place_meeting(x, y + 1, obj_wall));
 if(!grounded){
-	var _semifloor = instance_place(x, y + 1, obj_semifloor);
+	var _semifloor = noone;
+	/* Find the semifloor that is closest under the player */
+	var _list = ds_list_create();
+	var _num = instance_place_list(x, y + 1, obj_semifloor, _list, false);
+	if (_num > 0)
+	{
+	    for (var i = 0; i < _num; ++i)
+	    {
+			if(_semifloor == noone){
+				_semifloor = _list[| i];
+			} else if (_list[| i].bbox_top >= y && _list[| i].bbox_top > _semifloor.bbox_top){
+				_semifloor = _list[| i];
+			}
+	    }
+	}
+	ds_list_destroy(_list); 
 	grounded = (yvel >= 0 && _semifloor != noone && _semifloor.bbox_top >= y);
-}
-
-if cooldownTimer != -1  && cooldownTimer < cooldown{
-    cooldownTimer++;
-}
-if cooldownTimer == cooldown{
-    punchout = false; 
-    cooldownTimer = -1;
 }
 
 /* Slope grounded check */
@@ -196,7 +203,24 @@ if(fixes.can_physics && !moved_on_slope){
 		yvel = 0;
 		vyNew = 0;
 	}
-	var _semifloor = instance_place(x, y + vyNew, obj_semifloor);
+	var _semifloor = noone;
+	
+	/* Find the semifloor that is closest under the player */
+	var _list = ds_list_create();
+	var _num = instance_place_list(x, y + vyNew, obj_semifloor, _list, false);
+	if (_num > 0)
+	{
+	    for (var i = 0; i < _num; ++i)
+	    {
+			if(_semifloor == noone){
+				_semifloor = _list[| i];
+			} else if (_list[| i].bbox_top >= y && _list[| i].bbox_top > _semifloor.bbox_top){
+				_semifloor = _list[| i];
+			}
+	    }
+	}
+	ds_list_destroy(_list); 
+	
 	if(_semifloor != noone && vyNew > 0 && y <= _semifloor.bbox_top){ //If moving down, check that your original height is above the bbox_top
 		y = _semifloor.bbox_top;
 		yvel = 0;

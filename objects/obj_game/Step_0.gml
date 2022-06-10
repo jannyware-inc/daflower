@@ -1,3 +1,8 @@
+if(!audio_is_playing(global.bgm)){
+	audio_play_sound(global.bgm, 100, true);
+}
+
+
 if(keyboard_check_pressed(vk_up)){
 	obj_flower.height++;
 }

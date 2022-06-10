@@ -17,3 +17,6 @@ global.cam_y_level = array_create(10, noone);
 
 transition_time = 200;
 transition_timeup = 0;
+
+global.bgm = mus_level_1;
+global.bgm_id = noone;
