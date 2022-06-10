@@ -10,17 +10,20 @@ function scr_player_level_transition(){
 	fixes.can_deaccelerate = true;
 	fixes.can_physics = false;
 	
-	var _percent = 1 - (state_var_2 - global.level);
-	log("Percent: " +string(_percent));
+	var _percent = min(1, (1 - (state_var_2 - global.level)) * 1);
+	log("Percent: " + string(_percent));
 	if(floor(global.level) == global.level){
 		log("Done transistioning");
 		x = global.player_start_pos[state_var_2].x;
 		y = global.player_start_pos[state_var_2].y;
+		image_xscale = sign(global.player_start_pos[state_var_2].dir);
 		switch_state(player_states.normal);
 		return;
 	}
 	
+	var _to_screen_y =  global.player_start_pos[state_var_2].y - global.cam_y_level[state_var_2];
+	log("to screen y: " + string(_to_screen_y));
 	//log("To level, x, y: " + string(state_var_2) + ", " + string(global.player_start_pos[ceil(global.level)].x) + ", " + string(global.player_start_pos[ceil(global.level)].y));
-	x = lerp(state_var_0, global.player_start_pos[state_var_2].x,  _percent);
-	y = lerp(state_var_1, global.player_start_pos[state_var_2].y,  _percent);
+	x = twerp(TwerpType.inout_quad, state_var_0, global.player_start_pos[state_var_2].x,  _percent);
+	y = camera_get_view_y(view_camera[0]) + twerp(TwerpType.inout_quad, state_var_1, _to_screen_y, _percent);
 }

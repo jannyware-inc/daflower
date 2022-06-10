@@ -1,6 +1,6 @@
 if(floor((obj_flower.height-8)/224) != floor(global.level)){
 	instance_destroy(obj_water);
-	global.level = min(ceil(global.level+1), global.level+ 1/200);
+	global.level = min(ceil(global.level+1), global.level+ 1/150);
 	obj_flower.height = floor(obj_flower.height);
 } else {
 	global.level = floor(global.level);

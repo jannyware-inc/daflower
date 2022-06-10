@@ -1,2 +1,6 @@
 Flower autogrows slowly, but killing enemies will refill your water
 You can only water the top of the flower
+
+Second player is imaginary friend (translucent palette swap of player 1)
+
+Title: The Sunflower

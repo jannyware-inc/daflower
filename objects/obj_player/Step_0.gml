@@ -3,7 +3,8 @@ if(global.level != floor(global.level) && state != player_states.level_transitio
 	switch_state(player_states.level_transition);
 	state_var_2 = floor(global.level+1)
 	state_var_0 = x;
-	state_var_1 = y;
+	state_var_1 = y - camera_get_view_y(view_camera[0]);
+	log("Var 1: " + string(state_var_1));
 }
 if(keyboard_check_pressed(ord("I"))){
 	z--;
