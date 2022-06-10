@@ -1,0 +1,2 @@
+Flower autogrows slowly, but killing enemies will refill your water
+You can only water the top of the flower
