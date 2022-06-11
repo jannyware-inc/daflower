@@ -12,6 +12,9 @@ walk_xdeaccel = .15;
 air_xaccel = .25;
 air_xdeaccel = .15;
 
+max_water = 500;
+water = max_water/2;
+
 grav = .175;
 jump_yvel = -4;
 
@@ -47,15 +50,13 @@ ctrl_down_check = 0;
 ctrl_xaxis_check = 0;
 ctrl_yaxis_check = 0;
 
-max_pee = 100;
-pee = max_pee;
-
 xcollided = 0;
 ycollided = 0;
 
 enum player_states {
 	normal,
     level_transition,
+	hitstun,
 	dead,
 }
 
@@ -81,13 +82,5 @@ state_var_2 = 0;
 hp = 100;
 maxhp = 100;
 hpprevious = hp;
-iframes = 30;
-iframeCount = 0;
+
 invulnerable = false;
-
-cooldown = 10;
-cooldownTimer = -1;
-punchout = false;
-hitboxid = noone;
-
-damage_decals = 0;

@@ -4,7 +4,7 @@ function scr_player_level_transition(){
 	fixes.can_move = true;
 	fixes.can_gravity = true;
 	fixes.can_jump = true;
-	fixes.can_shoot = true;
+	fixes.can_shoot = false;
 	fixes.can_semifloor = true;
 	fixes.invulnerable = false;
 	fixes.can_deaccelerate = true;

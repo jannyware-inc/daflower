@@ -149,4 +149,5 @@ last_grounded = grounded;
 
 if(y > camera_get_view_y(view_camera[0]) + 256){
 	y = camera_get_view_y(view_camera[0]) - 8;
+	x = random_range(20, 236);
 }
