@@ -1,0 +1,2 @@
+parentid = noone;
+stuck = false;

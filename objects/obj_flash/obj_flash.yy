@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_water",
-    "path": "sprites/spr_water/spr_water.yy",
+    "name": "spr_flash",
+    "path": "sprites/spr_flash/spr_flash.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,7 +24,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_groundenemy","path":"objects/obj_groundenemy/obj_groundenemy.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +33,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_water",
+  "name": "obj_flash",
   "tags": [],
   "resourceType": "GMObject",
 }

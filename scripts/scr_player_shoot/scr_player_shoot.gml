@@ -12,6 +12,7 @@ function scr_player_shoot(){
 			xvel += random_range(-.5, .5);
 			image_angle = point_direction(0, 0, xvel, yvel);
 		}
+        water -= 1;
 		return sign(image_xscale);
 	}
 	return 0;
