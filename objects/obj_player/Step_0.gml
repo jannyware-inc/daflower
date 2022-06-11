@@ -293,6 +293,7 @@ was_shooting = shooting_dir;
 
 //hp stuff
 hp = clamp(hp, 0, maxhp);
+water = clamp(water, 0, max_water);
 
 if(y > camera_get_view_y(view_camera[0]) + 256){
 	y = camera_get_view_y(view_camera[0]) - 8;

@@ -7,11 +7,12 @@ function scr_drop_water(){
     while number > 0 {
         var dir = irandom_range(-180,180);
         var droplet = instance_create_layer(x,y,"Instances", obj_waterdroplet);
-        var spd = random_range(2, 2.5);
+        var spd = random_range(3, 4);
         with (droplet){
             direction = dir;
             speed = spd;
             parentid = idd;
         }
+        number -= 1;
     }
 }

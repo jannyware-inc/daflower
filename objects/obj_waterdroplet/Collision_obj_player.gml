@@ -1,5 +1,5 @@
 with(other){
     
-    water += 65;   
+    water += 30;   
 }
 instance_destroy();
