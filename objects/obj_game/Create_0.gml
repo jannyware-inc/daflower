@@ -18,5 +18,19 @@ global.cam_y_level = array_create(10, noone);
 transition_time = 200;
 transition_timeup = 0;
 
-global.bgm = mus_level_1;
+global.level_index = ceil(global.level);
+global.last_level_index = global.level_index;
+
+global.bgm_table = [
+	mus_level_2,
+	mus_level_2,
+	mus_level_1,
+	mus_level_1,
+	mus_level_3,
+	mus_level_3,
+	mus_level_4,
+	mus_level_4
+]
+global.bgm = global.bgm_table[0];
 global.bgm_id = noone;
+

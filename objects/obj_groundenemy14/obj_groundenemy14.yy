@@ -35,7 +35,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_groundenemy",
+  "name": "obj_groundenemy14",
   "tags": [],
   "resourceType": "GMObject",
 }

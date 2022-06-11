@@ -144,7 +144,7 @@ if(fixes.can_gravity){
 }
 
 xcollided = false;
-ycollided = true;
+ycollided = false;
 
 /* Handle sub-pixel movement */
 cx += xvel;

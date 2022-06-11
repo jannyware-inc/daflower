@@ -37,10 +37,6 @@ if(_slope != noone && yvel >= 0){
 	}
 }
 
-if(xcollided != 0) image_xscale = -image_xscale;
-xvel = movespd * image_xscale;
-
-
 yvel = min(yvel + grav, yvel_max);
 
 xcollided = false;
@@ -146,7 +142,3 @@ if(!moved_on_slope){
 }
 
 last_grounded = grounded;
-
-if(y > camera_get_view_y(view_camera[0]) + 256){
-	y = camera_get_view_y(view_camera[0]) - 8;
-}
