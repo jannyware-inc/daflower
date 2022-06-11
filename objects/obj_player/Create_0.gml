@@ -53,6 +53,8 @@ ctrl_yaxis_check = 0;
 xcollided = 0;
 ycollided = 0;
 
+shadow_sprite = noone;
+
 enum player_states {
 	normal,
     level_transition,

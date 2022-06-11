@@ -20,7 +20,7 @@ if(keyboard_check_pressed(vk_right)){
 if(floor(global.level) != floor(global.level)){
 	global.level += 1/200;
 }
-log(audio_sound_get_track_position(global.bgm_id));
+
 if(global.level_index != global.last_level_index){ //Called at start of transition
 	//log("Loading track" + string(global.level_index));
 	

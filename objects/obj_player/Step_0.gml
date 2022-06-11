@@ -252,7 +252,9 @@ if(fixes.can_shoot)
 {
 	shooting_dir = scr_player_shoot();
 }
+
 /* Draw helper */
+shadow_sprite = noone;
 switch(state)
 {
 	case(player_states.normal):
@@ -269,8 +271,10 @@ switch(state)
 				sprite_index = spr_kirby_walk;
 				image_index += 1/4;
 			} else {
-				image_index = 0;
-				sprite_index = spr_kirby_stand;	
+				image_index += 10/60;
+				//sprite_index = spr_kirby_stand;	
+				sprite_index = spr_standing;
+				shadow_sprite = spr_standing_shadow;
 			}
 		} else {
 			sprite_index = spr_kirby_jump_up;
