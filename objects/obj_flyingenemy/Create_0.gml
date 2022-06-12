@@ -3,7 +3,7 @@ grounded = false;
 grounded_ramp_id = false;
 
 movespd = .5;
-grav = .1;
+grav = 0;
 yvel_max = .3;
 
 state = enemy_states.alive;

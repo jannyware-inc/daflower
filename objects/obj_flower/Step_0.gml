@@ -19,6 +19,19 @@ if(floor(height) != floor(last_height)){
 		}
 	}
 }
+
 image_yscale = floor(height);
 obj_flowertop.x = (bbox_left + bbox_right)/2;
 obj_flowertop.y = bbox_top;
+if(last_growth < 3){
+	if(!audio_is_playing(snd_grow)){
+		growsound = audio_play_sound(snd_grow, 100, true);
+	}
+	var _percent = (height-8)/224 % 1;
+	log("percent sound: " + string(_percent));
+	audio_sound_pitch(growsound, lerp(.5, 3, _percent));
+} else if(growsound != noone){
+	audio_stop_sound(growsound);
+}
+
+last_growth++;

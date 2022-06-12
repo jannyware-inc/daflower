@@ -9,3 +9,9 @@ ycollided = 0;
 
 cx = 0;
 cy = 0;
+
+enum enemy_states {
+	alive,
+	dead,
+	respawn,
+}

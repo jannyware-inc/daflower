@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"snd_grow","path":"sounds/snd_grow/snd_grow.yy",},"order":14,},
     {"id":{"name":"spr_looking_away","path":"sprites/spr_looking_away/spr_looking_away.yy",},"order":18,},
     {"id":{"name":"mus_level_1","path":"sounds/mus_level_1/mus_level_1.yy",},"order":0,},
     {"id":{"name":"scribble_font_bake_outline","path":"scripts/scribble_font_bake_outline/scribble_font_bake_outline.yy",},"order":4,},
@@ -36,6 +37,7 @@
     {"id":{"name":"scribble_super_create","path":"scripts/scribble_super_create/scribble_super_create.yy",},"order":1,},
     {"id":{"name":"switch_state","path":"scripts/switch_state/switch_state.yy",},"order":2,},
     {"id":{"name":"__scribble_gen_10_set_padding_flags","path":"scripts/__scribble_gen_10_set_padding_flags/__scribble_gen_10_set_padding_flags.yy",},"order":1,},
+    {"id":{"name":"obj_flyingenemy","path":"objects/obj_flyingenemy/obj_flyingenemy.yy",},"order":19,},
     {"id":{"name":"spr_water","path":"sprites/spr_water/spr_water.yy",},"order":15,},
     {"id":{"name":"__scribble_gen_4_build_words","path":"scripts/__scribble_gen_4_build_words/__scribble_gen_4_build_words.yy",},"order":4,},
     {"id":{"name":"__shd_scribble_bake_outline_8dir","path":"shaders/__shd_scribble_bake_outline_8dir/__shd_scribble_bake_outline_8dir.yy",},"order":2,},
@@ -43,6 +45,7 @@
     {"id":{"name":"__scribble_class_typist","path":"scripts/__scribble_class_typist/__scribble_class_typist.yy",},"order":5,},
     {"id":{"name":"spr_ladybug_fly","path":"sprites/spr_ladybug_fly/spr_ladybug_fly.yy",},"order":23,},
     {"id":{"name":"scribble_typewriter_add_event","path":"scripts/scribble_typewriter_add_event/scribble_typewriter_add_event.yy",},"order":7,},
+    {"id":{"name":"spr_bee_fly","path":"sprites/spr_bee_fly/spr_bee_fly.yy",},"order":34,},
     {"id":{"name":"scribble_font_bake_shader","path":"scripts/scribble_font_bake_shader/scribble_font_bake_shader.yy",},"order":3,},
     {"id":{"name":"__scribble_gen_3_devanagari","path":"scripts/__scribble_gen_3_devanagari/__scribble_gen_3_devanagari.yy",},"order":3,},
     {"id":{"name":"__scribble_font_add_msdf_from_project","path":"scripts/__scribble_font_add_msdf_from_project/__scribble_font_add_msdf_from_project.yy",},"order":7,},
@@ -103,6 +106,7 @@
     {"id":{"name":"scribble_flush_everything","path":"scripts/scribble_flush_everything/scribble_flush_everything.yy",},"order":3,},
     {"id":{"name":"__shd_scribble","path":"shaders/__shd_scribble/__shd_scribble.yy",},"order":0,},
     {"id":{"name":"mus_level_2","path":"sounds/mus_level_2/mus_level_2.yy",},"order":1,},
+    {"id":{"name":"snd_hum","path":"sounds/snd_hum/snd_hum.yy",},"order":13,},
     {"id":{"name":"obj_flower","path":"objects/obj_flower/obj_flower.yy",},"order":5,},
     {"id":{"name":"scribble_anim_cycle","path":"scripts/scribble_anim_cycle/scribble_anim_cycle.yy",},"order":1,},
     {"id":{"name":"Room0","path":"rooms/Room0/Room0.yy",},"order":1,},
