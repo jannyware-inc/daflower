@@ -283,7 +283,8 @@ switch(state)
 				image_index += (1/5.99);
 			}
 		} else {
-			sprite_index = spr_kirby_jump_up;
+			sprite_index = spr_jump_up;
+			shadow_sprite = spr_jump_up_shadow;
 		}
 		break;
 }
@@ -305,7 +306,7 @@ was_shooting = shooting_dir;
 hp = clamp(hp, 0, maxhp);
 water = clamp(water, 0, max_water);
 
-if(y > camera_get_view_y(view_camera[0]) + 256){
+if(y > camera_get_view_y(view_camera[0]) + 224 + 20){
 	y = camera_get_view_y(view_camera[0]) - 8;
 }
 

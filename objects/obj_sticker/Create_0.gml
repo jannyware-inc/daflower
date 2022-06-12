@@ -1,4 +1,4 @@
-
+/*
 hands = array_create(0);
 
 var hand1, hand2;
@@ -21,3 +21,4 @@ hand1y = y;
 hand2x = x;
 
 hand2y = y;
+*/

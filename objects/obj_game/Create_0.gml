@@ -30,7 +30,13 @@ global.bgm_table = [
 	mus_level_3,
 	mus_level_4,
 	mus_level_4
-]
+];
 global.bgm = global.bgm_table[0];
 global.bgm_id = noone;
 
+audio_group_set_gain(audiogroup_default, 0.2, 0);
+
+///Create Scribble
+//scribble_font_set_default("fnt)
+typist = scribble_typist();
+typist.in(1, 0);
