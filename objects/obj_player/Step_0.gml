@@ -256,6 +256,8 @@ if(fixes.can_shoot)
 }
 
 /* Draw helper */
+draw_player = true;
+if(invincibility_timer % 2 > 0) draw_player = false;
 shadow_sprite = noone;
 switch(state)
 {

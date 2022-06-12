@@ -22,6 +22,11 @@ if count % 10 == 0{
     //image_index += 1;
 }
 
+visible = true;
+if(count > 200 && following_player_id == noone){
+	if(count % 2 > 0) visible = false;
+}
+
 if count > 300{
     instance_destroy();   
 }

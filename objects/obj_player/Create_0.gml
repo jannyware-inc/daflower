@@ -36,6 +36,7 @@ invincibility_timer_max = 120;
 invincibility_timer = 0
 
 last_grounded = false;
+draw_player = true;
 
 /* Controller inputs */
 ctrl_left_check = 0;

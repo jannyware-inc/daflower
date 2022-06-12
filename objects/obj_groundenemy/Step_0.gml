@@ -11,7 +11,6 @@ if (state == enemy_states.alive){
 			play_sfx(sfx_stomp);
 			return;
 		} else if(_player.invincibility_timer == 0 && !_player.fixes.invulnerable){
-			log("damage player");
 			_player.state = player_states.hitstun;
 		}
 	}
@@ -224,7 +223,7 @@ if (state == enemy_states.alive){
 		while(!_place_found){
 			var _to_x = random_range(8, 256 - 8);
 			var _to_y = random_range(_camy, _camy + 200);
-			if(!place_meeting(_to_x, _to_y, obj_wall)){
+			if(!place_meeting(_to_x, _to_y, obj_wall) && !place_meeting(_to_x, _to_y, obj_no_spawn_zone)){
 				x = _to_x;
 				y = _to_y;
 				_place_found = true;
