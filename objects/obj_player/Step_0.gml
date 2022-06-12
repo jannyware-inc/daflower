@@ -268,10 +268,9 @@ switch(state)
 		if(grounded)
 		{			
 			if(abs(xvel) > 0.1){
-				sprite_index = spr_kirby_walk;
+				sprite_index = spr_walk;
 				shadow_sprite = spr_walk_shadow;
-				image_index += (1/5.99);
-				log("Image index: " + string(image_index));
+				image_index += (1/5.99); //Using 1/6 causes a bug.
 			} else {
 				
 				//sprite_index = spr_kirby_stand;	

@@ -55,7 +55,7 @@
     {"id":{"name":"spr_stickerhand","path":"sprites/spr_stickerhand/spr_stickerhand.yy",},"order":22,},
     {"id":{"name":"Notes","path":"notes/Notes/Notes.yy",},"order":0,},
     {"id":{"name":"twerp","path":"scripts/twerp/twerp.yy",},"order":5,},
-    {"id":{"name":"spr_kirby_walk","path":"sprites/spr_kirby_walk/spr_kirby_walk.yy",},"order":8,},
+    {"id":{"name":"spr_walk","path":"sprites/spr_walk/spr_walk.yy",},"order":8,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":5,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_tiles","path":"sprites/spr_tiles/spr_tiles.yy",},"order":24,},
