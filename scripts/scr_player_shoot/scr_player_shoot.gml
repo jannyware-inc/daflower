@@ -3,7 +3,7 @@
 function scr_player_shoot(){
 	if(ctrl_action_check && water > 0){
 		//water--;
-		with(instance_create_depth(x + 12*sign(image_xscale) + random_range(-2, 2), y - 7 + random_range(-2, 2), depth - 1, obj_water)){
+		with(instance_create_depth(x + 18*sign(image_xscale) + random_range(-2, 2), y - 9 + random_range(-2, 2), depth - 1, obj_water)){
 			xvel = sign(other.image_xscale) * .75;
 			if(sign(other.xvel) == sign(xvel)){
 				xvel += other.xvel;

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_kirby_stand",
-    "path": "sprites/spr_kirby_stand/spr_kirby_stand.yy",
+    "name": "spr_standing",
+    "path": "sprites/spr_standing/spr_standing.yy",
   },
   "solid": false,
   "visible": true,

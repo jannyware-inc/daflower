@@ -267,14 +267,17 @@ switch(state)
 		}
 		if(grounded)
 		{			
-			if(abs(xvel) > 0.5){
+			if(abs(xvel) > 0.1){
 				sprite_index = spr_kirby_walk;
-				image_index += 1/4;
+				shadow_sprite = spr_walk_shadow;
+				image_index += (1/5.99);
+				log("Image index: " + string(image_index));
 			} else {
-				image_index += 10/60;
+				
 				//sprite_index = spr_kirby_stand;	
 				sprite_index = spr_standing;
 				shadow_sprite = spr_standing_shadow;
+				image_index += (1/5.99);
 			}
 		} else {
 			sprite_index = spr_kirby_jump_up;

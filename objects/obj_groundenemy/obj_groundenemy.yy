@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_ladybug",
-    "path": "sprites/spr_ladybug/spr_ladybug.yy",
+    "name": "spr_butterfly",
+    "path": "sprites/spr_butterfly/spr_butterfly.yy",
   },
   "solid": false,
   "visible": true,
