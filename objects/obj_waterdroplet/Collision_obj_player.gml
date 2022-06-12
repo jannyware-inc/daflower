@@ -1,8 +1,5 @@
-if active{
-audio_play_sound(snd_collectwater, 0 , false);
+if (!can_follow_player) return;
 with(other){
-    
-    water += 30;   
+    water = min(water + 50, max_water);   
 }
 instance_destroy();
-}

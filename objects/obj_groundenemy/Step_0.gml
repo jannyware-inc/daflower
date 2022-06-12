@@ -1,4 +1,20 @@
-if !dead{
+if (state == enemy_states.alive){
+	var _player = instance_place(x, y, obj_player);
+	if(_player != noone){
+		if(_player.yvel > 0 && !_player.grounded && _player.state != player_states.hitstun && _player.y <= y){
+			var _playerdir = point_direction(x, y-4, _player.x, _player.y - 8);
+			var _len = 10;
+			instance_create_depth(x + lengthdir_x(_len, _playerdir), y - 4 + lengthdir_y(_len, _playerdir), depth - 1, obj_flash);
+			state = enemy_states.dead;
+			_player.yvel = -4;
+			_player.can_cancel_jump = true;
+			play_sfx(sfx_stomp);
+			return;
+		} else if(_player.invincibility_timer == 0 && !_player.fixes.invulnerable){
+			log("damage player");
+			_player.state = player_states.hitstun;
+		}
+	}
     grounded = (yvel >= 0 && place_meeting(x, y + 1, obj_wall));
     if(!grounded){
     	var _semifloor = noone;
@@ -149,8 +165,8 @@ if !dead{
     last_grounded = grounded;
 
     if(y > camera_get_view_y(view_camera[0]) + 256){
-    	y = camera_get_view_y(view_camera[0]) - 8;
-    	x = random_range(20, 236);
+    	y = camera_get_view_y(view_camera[0]);
+    	x = random_range(20, 204);
     }
     
     if hp <= 0 {
@@ -159,12 +175,68 @@ if !dead{
         dead = true;
         var anim = instance_create_layer(x , y, "animations", obj_flash);
     }
-}
-else{
+	
+	/* Draw helper */
+	if(grounded){
+		sprite_index = spr_ladybug_walk;
+	} else {
+		sprite_index = spr_ladybug_fly;
+	}
+} else if(state == enemy_states.dead) {
+	if(state_timeup == 0){
+		y -= sprite_height/2;
+		yvel = -3;
+		xvel = .5 * sign(image_xscale);
+		scr_drop_water();
+	}
+	yvel += .2;
+	y += yvel;
+	x += xvel;
+	image_speed = 0;
+	image_yscale = -1;
+	state_timeup++;
+	if(state_timeup >= 160){
+		state_timeup = 0;
+		state = enemy_states.respawn;
+		yvel = 0;
+		xvel = 0;
+		dead = false;
+		y = camera_get_view_y(view_camera[0]) - 8;
+    	x = random_range(20, 236);
+		image_yscale = 1;
+		image_speed = 1;
+	}
+	/*
     if deathcount <= 0 {
         scr_drop_water();
         instance_destroy();   
     }
     
     deathcount--;
+	*/
+	
+} else if (state == enemy_states.respawn){
+	/* Look for a place to respawn */
+	if(state_timeup == 0){
+		sprite_index = spr_ladybug_fly;
+		var _place_found = false;
+		var _camy = camera_get_view_y(view_camera[0]);
+		while(!_place_found){
+			var _to_x = random_range(8, 256 - 8);
+			var _to_y = random_range(_camy, _camy + 200);
+			if(!place_meeting(_to_x, _to_y, obj_wall)){
+				x = _to_x;
+				y = _to_y;
+				_place_found = true;
+			}
+		}
+	}
+	visible = ((state_timeup % 4) < 2);
+	if(state_timeup >= 60){
+		visible = true;
+		state_timeup = 0;
+		state = enemy_states.alive;
+		return;
+	}
+	state_timeup++;
 }

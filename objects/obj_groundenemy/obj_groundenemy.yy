@@ -1,12 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_butterfly",
-    "path": "sprites/spr_butterfly/spr_butterfly.yy",
+    "name": "spr_ladybug_walk",
+    "path": "sprites/spr_ladybug_walk/spr_ladybug_walk.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_ladybug_walk",
+    "path": "sprites/spr_ladybug_walk/spr_ladybug_walk.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_enemyparent",

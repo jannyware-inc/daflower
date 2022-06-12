@@ -84,6 +84,7 @@ if (hp <= 0 && state != player_states.dead)
 
 switch(state){
 	case player_states.normal: scr_player_normal(); break;
+	case player_states.hitstun: scr_player_hitstun(); break;
 	case player_states.level_transition: scr_player_level_transition(); break;
 }
 

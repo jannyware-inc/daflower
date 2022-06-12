@@ -1,4 +1,5 @@
-/* Pans camera up, changes level */
+/* This code is in charge of panning the camera (by changing global.level)
+to match the correct room that corresponds with the height of the flower.*/
 if(floor((obj_flower.height-8)/224) != floor(global.level)){
 	instance_destroy(obj_water);
 	obj_flower.height = floor(obj_flower.height);
@@ -12,7 +13,9 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 global.last_level_index = global.level_index;
 
 camera_set_view_pos(view_camera[0], 0, 4000 - global.level*224);
-
+/* This code runs at the start of the game once. It looks at all the instances
+in room4, and puts them all into an array of lists - constructing each list
+of all the objects in a certain y range, then deactivates them */
 if(last_room != room && room == Room4 && level_objects_done == false){
 	level_objects_done = true;
 	for(var i = 0; i < 10; i++){
@@ -46,6 +49,7 @@ if(last_room != room && room == Room4 && level_objects_done == false){
 	}
 }
 
+/* This code loads all the instances at the first/bottom level */
 if(!loaded_first_level){
 	loaded_first_level = true;
 	var _level = global.level;

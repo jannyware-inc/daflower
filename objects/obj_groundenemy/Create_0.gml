@@ -6,9 +6,14 @@ movespd = .5;
 grav = .1;
 yvel_max = .3;
 
+enum enemy_states {
+	alive,
+	dead,
+	respawn,
+}
+state = enemy_states.alive;
+state_timeup = 0;
 
-
-deathcount = 25;
 dead = false;
 
 hp = 100;
