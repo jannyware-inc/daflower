@@ -11,6 +11,10 @@ function scr_player_shoot(){
 			yvel = 1;
 			xvel += random_range(-.5, .5);
 			image_angle = point_direction(0, 0, xvel, yvel);
+            
+            if !audio_is_playing(snd_pouring2){
+                audio_play_sound(snd_pouring2, 0, false);
+            }
 		}
         water -= 1;
 		return sign(image_xscale);

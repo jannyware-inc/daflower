@@ -8,7 +8,7 @@ yvel_max = .3;
 
 
 
-deathcount = 150;
+deathcount = 25;
 dead = false;
 
 hp = 100;

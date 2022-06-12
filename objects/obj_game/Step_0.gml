@@ -22,7 +22,9 @@ if(floor(global.level) != floor(global.level)){
 }
 
 if(global.level_index != global.last_level_index){ //Called at start of transition
-	//log("Loading track" + string(global.level_index));
+	audio_play_sound(snd_leveltransition, 0, false);
+    
+    //log("Loading track" + string(global.level_index));
 	
 	/* Switch BGM */
 	if(!audio_is_playing(global.bgm_table[global.level_index])){

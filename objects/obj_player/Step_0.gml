@@ -129,6 +129,7 @@ else if(fixes.can_deaccelerate)
 }
 
 if(fixes.can_jump && ctrl_jump_press && grounded){
+    audio_play_sound(snd_jump,0,false);
 	yvel = jump_yvel;
 	can_cancel_jump = true;
 }
@@ -303,4 +304,8 @@ water = clamp(water, 0, max_water);
 
 if(y > camera_get_view_y(view_camera[0]) + 256){
 	y = camera_get_view_y(view_camera[0]) - 8;
+}
+
+if global.level = 6{
+    grav = .0875   
 }

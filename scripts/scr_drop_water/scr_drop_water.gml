@@ -2,13 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_drop_water(){
      
-    var number = irandom_range(2,4);
+    var number = irandom_range(2,3);
     var idd = id;
     while number > 0 {
         var dir = irandom_range(-180,180);
         var droplet = instance_create_layer(x,y,"Instances", obj_waterdroplet);
-        var spd = random_range(3, 4);
+        var spd = random_range(1, 4);
         with (droplet){
+            audio_play_sound(snd_waterdrop, 0, false);
             direction = dir;
             speed = spd;
             parentid = idd;
