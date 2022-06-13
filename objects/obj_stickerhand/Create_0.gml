@@ -1,2 +1,0 @@
-parentid = noone;
-stuck = false;

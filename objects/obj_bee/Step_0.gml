@@ -1,3 +1,4 @@
+if(global.enemiespaused || global.paused) return;
 if (state == enemy_states.alive){
 	var _player = instance_place(x, y, obj_player);
 	if(_player != noone){
@@ -123,29 +124,6 @@ if (state == enemy_states.alive){
     		yvel = 0;
     		vyNew = 0;
     	}
-    	var _semifloor = noone;
-	
-    	/* Find the semifloor that is closest under the player */
-    	var _list = ds_list_create();
-    	var _num = instance_place_list(x, y + vyNew, obj_semifloor, _list, false);
-    	if (_num > 0)
-    	{
-    	    for (var i = 0; i < _num; ++i)
-    	    {
-    			if(_semifloor == noone){
-    				_semifloor = _list[| i];
-    			} else if (_list[| i].bbox_top >= y && _list[| i].bbox_top > _semifloor.bbox_top){
-    				_semifloor = _list[| i];
-    			}
-    	    }
-    	}
-    	ds_list_destroy(_list); 
-	
-    	if(_semifloor != noone && vyNew > 0 && y <= _semifloor.bbox_top){ //If moving down, check that your original height is above the bbox_top
-    		y = _semifloor.bbox_top;
-    		yvel = 0;
-    		vyNew = 0;
-    	}
     	y += vyNew;
 
     	/* X axis collision code */
@@ -180,11 +158,7 @@ if (state == enemy_states.alive){
     }
 	
 	/* Draw helper */
-	if(grounded){
-		sprite_index = spr_ladybug_walk;
-	} else {
-		sprite_index = spr_ladybug_fly;
-	}
+	sprite_index = spr_bee_fly;
 } else if(state == enemy_states.dead) {
 	if(state_timeup == 0){
 		y -= sprite_height/2;
@@ -221,7 +195,7 @@ if (state == enemy_states.alive){
 } else if (state == enemy_states.respawn){
 	/* Look for a place to respawn */
 	if(state_timeup == 0){
-		sprite_index = spr_ladybug_fly;
+		sprite_index = spr_bee_fly;
 		var _place_found = false;
 		var _camy = camera_get_view_y(view_camera[0]);
 		while(!_place_found){

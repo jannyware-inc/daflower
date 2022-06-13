@@ -1,6 +1,7 @@
 /* This code is in charge of panning the camera (by changing global.level)
 to match the correct room that corresponds with the height of the flower.*/
 if(floor((obj_flower.height-8)/224) != floor(global.level)){
+	global.enemiespaused = true;
 	instance_destroy(obj_water);
 	obj_flower.height = floor(obj_flower.height);
 	global.level = global.level+ 1/150;
@@ -8,7 +9,9 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 		global.level = floor(global.level);
 	}
 } else {
+	global.enemiespaused = false;
 	global.level = floor(global.level);
+	time++;
 }
 global.last_level_index = global.level_index;
 

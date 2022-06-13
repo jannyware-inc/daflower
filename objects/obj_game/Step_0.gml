@@ -53,3 +53,4 @@ if(floor(global.level) > floor(last_level)){ //Called at end of transition
 }
 
 last_level = global.level;
+

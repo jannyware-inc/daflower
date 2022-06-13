@@ -1,3 +1,4 @@
+if(global.enemiespaused || global.paused) return;
 if (state == enemy_states.alive){
 	var _player = instance_place(x, y, obj_player);
 	if(_player != noone){
@@ -63,6 +64,8 @@ if (state == enemy_states.alive){
 			substate = penguin_states.walled;
 			substate_timeup = 0;
 			yvel = 0;
+			instance_create_depth(x + sign(image_xscale) * 13, y - 3, depth -1, obj_flash);
+			screen_shake(8,2);
 		} else {
 			xvel = movespd * image_xscale;
 			yvel = min(yvel + grav, yvel_max);
@@ -71,6 +74,9 @@ if (state == enemy_states.alive){
 	if(substate == penguin_states.walled){
 		xvel = 0;
 		yvel = min(yvel + 0.02, yvel_max);
+		if(substate_timeup == 0){
+			play_sfx(snd_crash);
+		}
 		if(substate_timeup >= 25){
 			image_xscale *= -1;
 			substate = penguin_states.normal;

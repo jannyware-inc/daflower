@@ -1,6 +1,7 @@
 global.paused = false;
 
 global.level = 0;
+global.enemiespaused = true;
 
 global.level_objects = 0;
 global.screen_shake_frames = 0;
@@ -10,6 +11,7 @@ global.starting_y = 4000;
 global.level_height = 224;
 last_room = room;
 last_level = global.level;
+time = 0;
 
 level_objects_done = false;
 loaded_first_level = false;
