@@ -31,7 +31,9 @@ global.bgm_table = [
 	mus_level_3,
 	mus_level_3,
 	mus_level_4,
-	mus_level_4
+	mus_level_4,
+	mus_level_4,
+	mus_level_4,
 ];
 global.bgm = global.bgm_table[0];
 global.bgm_id = noone;

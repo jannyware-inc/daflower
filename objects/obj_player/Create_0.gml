@@ -38,6 +38,8 @@ invincibility_timer = 0
 last_grounded = false;
 draw_player = true;
 
+bounced = false;
+
 /* Controller inputs */
 ctrl_left_check = 0;
 ctrl_right_check = 0;

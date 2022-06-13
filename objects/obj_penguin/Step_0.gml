@@ -57,11 +57,31 @@ if (state == enemy_states.alive){
     	}
     }
 
-    if(xcollided != 0) image_xscale = -image_xscale;
-    xvel = movespd * image_xscale;
+    
+	if(substate == penguin_states.normal){
+		if(xcollided != 0){
+			substate = penguin_states.walled;
+			substate_timeup = 0;
+			yvel = 0;
+		} else {
+			xvel = movespd * image_xscale;
+			yvel = min(yvel + grav, yvel_max);
+		}
+	}
+	if(substate == penguin_states.walled){
+		xvel = 0;
+		yvel = min(yvel + 0.02, yvel_max);
+		if(substate_timeup >= 25){
+			image_xscale *= -1;
+			substate = penguin_states.normal;
+			substate_timeup = 0;
+		} else {
+			substate_timeup++;
+		}
+	}
 
-
-    yvel = min(yvel + grav, yvel_max);
+	
+    
 
     xcollided = false;
     ycollided = false;
@@ -123,6 +143,29 @@ if (state == enemy_states.alive){
     		yvel = 0;
     		vyNew = 0;
     	}
+    	var _semifloor = noone;
+	
+    	/* Find the semifloor that is closest under the player */
+    	var _list = ds_list_create();
+    	var _num = instance_place_list(x, y + vyNew, obj_semifloor, _list, false);
+    	if (_num > 0)
+    	{
+    	    for (var i = 0; i < _num; ++i)
+    	    {
+    			if(_semifloor == noone){
+    				_semifloor = _list[| i];
+    			} else if (_list[| i].bbox_top >= y && _list[| i].bbox_top > _semifloor.bbox_top){
+    				_semifloor = _list[| i];
+    			}
+    	    }
+    	}
+    	ds_list_destroy(_list); 
+	
+    	if(_semifloor != noone && vyNew > 0 && y <= _semifloor.bbox_top){ //If moving down, check that your original height is above the bbox_top
+    		y = _semifloor.bbox_top;
+    		yvel = 0;
+    		vyNew = 0;
+    	}
     	y += vyNew;
 
     	/* X axis collision code */
@@ -157,7 +200,11 @@ if (state == enemy_states.alive){
     }
 	
 	/* Draw helper */
-	sprite_index = spr_bee_fly;
+	if(substate == penguin_states.normal){
+		image_index = 0;
+	} else {
+		image_index = 1;
+	}
 } else if(state == enemy_states.dead) {
 	if(state_timeup == 0){
 		y -= sprite_height/2;
@@ -170,6 +217,7 @@ if (state == enemy_states.alive){
 	x += xvel;
 	image_speed = 0;
 	image_yscale = -1;
+	image_index = 1;
 	state_timeup++;
 	if(state_timeup >= 160){
 		state_timeup = 0;
@@ -194,7 +242,10 @@ if (state == enemy_states.alive){
 } else if (state == enemy_states.respawn){
 	/* Look for a place to respawn */
 	if(state_timeup == 0){
-		sprite_index = spr_bee_fly;
+		substate = penguin_states.normal;
+		substate_timeup = 0;
+		sprite_index = spr_penguin_slide;
+		image_index = 0;
 		var _place_found = false;
 		var _camy = camera_get_view_y(view_camera[0]);
 		while(!_place_found){

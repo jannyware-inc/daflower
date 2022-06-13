@@ -30,6 +30,10 @@ ctrl_yaxis_check = ctrl_down_check - ctrl_up_check;
 
 
 /* Pre-step checks */
+if(bounced){
+	can_cancel_jump = true;
+	yvel = -4;
+}
 invincibility_timer = max(0, invincibility_timer-1);
 grounded = (yvel >= 0 && place_meeting(x, y + 1, obj_wall));
 if(!grounded){
@@ -321,6 +325,7 @@ if(was_shooting == 0 && shooting_dir != 0)
 	audio_stop_sound(sfx_pee);
 }
 */
+bounced = false;
 was_shooting = shooting_dir;
 
 
@@ -330,6 +335,7 @@ water = clamp(water, 0, max_water);
 
 if(y > camera_get_view_y(view_camera[0]) + 224 + 20){
 	y = camera_get_view_y(view_camera[0]) - 8;
+	invincibility_timer = max(invincibility_timer, 10);
 }
 
 if global.level = 6{

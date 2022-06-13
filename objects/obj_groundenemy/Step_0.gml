@@ -6,8 +6,7 @@ if (state == enemy_states.alive){
 			var _len = 10;
 			instance_create_depth(x + lengthdir_x(_len, _playerdir), y - 4 + lengthdir_y(_len, _playerdir), depth - 1, obj_flash);
 			state = enemy_states.dead;
-			_player.yvel = -4;
-			_player.can_cancel_jump = true;
+			_player.bounced = true;
 			play_sfx(sfx_stomp);
 			return;
 		} else if(_player.invincibility_timer == 0 && !_player.fixes.invulnerable){
