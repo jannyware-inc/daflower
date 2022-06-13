@@ -13,25 +13,35 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 global.last_level_index = global.level_index;
 
 camera_set_view_pos(view_camera[0], 0, 4000 - global.level*224);
+if(global.screen_shake_frames > 0){
+	global.screen_shake_frames--;
+	var camx = camera_get_view_x(view_camera[0]);
+	var camy = camera_get_view_y(view_camera[0]);
+	var int = global.screen_shake_intensity;
+	camera_set_view_pos(view_camera[0], camx + random_range(-int, int), camy + random_range(-int, int));
+}
 /* This code runs at the start of the game once. It looks at all the instances
 in room4, and puts them all into an array of lists - constructing each list
 of all the objects in a certain y range, then deactivates them */
-if(last_room != room && room == Room4 && level_objects_done == false){
+if(room == Room4 && level_objects_done == false){
 	level_objects_done = true;
 	for(var i = 0; i < 10; i++){
 		global.cam_y_level[i] = global.starting_y - i * global.level_height;
 		global.level_objects[i] = ds_list_create();
 		with(obj_wall){
-			if(y >= global.starting_y - i * global.level_height){
-				ds_list_add(global.level_objects[i], id);
-				instance_deactivate_object(id);
+			if(!permanent){
+				if(y >= global.starting_y - i * global.level_height){
+					ds_list_add(global.level_objects[i], id);
+					instance_deactivate_object(id);
+				}
 			}
 		}
 		with(obj_semifloor){
-			if(object_index == obj_flower) break;
-			if(y >= global.starting_y - i * global.level_height){
-				ds_list_add(global.level_objects[i], id);
-				instance_deactivate_object(id);
+			if(object_index != obj_flower){
+				if(y >= global.starting_y - i * global.level_height){
+					ds_list_add(global.level_objects[i], id);
+					instance_deactivate_object(id);
+				}
 			}
 		}
 		with(obj_slope){
@@ -62,3 +72,6 @@ if(!loaded_first_level){
 		global.player_start_pos[level] = id;
 	}
 }
+
+/* Parallax bg */
+layer_y("Background", lerp(264, 1984, global.level/10));

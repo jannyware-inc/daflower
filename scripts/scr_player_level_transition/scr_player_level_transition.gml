@@ -13,7 +13,6 @@ function scr_player_level_transition(){
 	var _percent = min(1, (1 - (state_var_2 - global.level)) * 1);
 	if(_percent > .5) image_xscale = sign(global.player_start_pos[state_var_2].dir);
 	if(floor(global.level) == global.level){
-		log("Done transistioning");
 		x = global.player_start_pos[state_var_2].x;
 		y = global.player_start_pos[state_var_2].y;
 		

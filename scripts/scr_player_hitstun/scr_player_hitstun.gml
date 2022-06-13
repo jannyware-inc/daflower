@@ -12,6 +12,8 @@ function scr_player_hitstun(){
 	
 	if(state_timeup == 0){
 		yvel = -2;
+	}
+	if(state_timeup == 7){
 		for(var i = 0; i < 30; i++){
 			if(water > 0){
 				water--;

@@ -3,6 +3,8 @@ global.paused = false;
 global.level = 0;
 
 global.level_objects = 0;
+global.screen_shake_frames = 0;
+global.screen_shake_intensity = 0;
 
 global.starting_y = 4000;
 global.level_height = 224;

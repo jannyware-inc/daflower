@@ -73,8 +73,8 @@ fixes = {
 	can_deaccelerate: true,
 	can_physics: true,
 }
-
 state = player_states.normal;
+
 /* Temporary variables that can reused by multiple states */
 state_timeup = 0;
 state_var_0 = 0;

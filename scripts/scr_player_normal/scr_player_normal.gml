@@ -9,4 +9,13 @@ function scr_player_normal(){
 	fixes.invulnerable = false;
 	fixes.can_deaccelerate = true;
 	fixes.can_physics = true;
+	if(state_timeup == 0){
+		state_var_0 = 0;
+	}
+	if(abs(xvel) < 0.1){
+		state_var_0++;
+	} else {
+		state_var_0 = 0;	
+	}
+	state_timeup++;
 }
