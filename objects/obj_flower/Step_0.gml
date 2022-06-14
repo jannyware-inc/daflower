@@ -28,7 +28,7 @@ if(last_growth < 3){
 		growsound = audio_play_sound(snd_grow, 100, true);
 	}
 	var _percent = (height-8)/224 % 1;
-	log("percent sound: " + string(_percent));
+	//log("percent sound: " + string(_percent));
 	audio_sound_pitch(growsound, lerp(.5, 3, _percent));
 } else if(growsound != noone){
 	audio_stop_sound(growsound);

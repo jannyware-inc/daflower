@@ -1,3 +1,4 @@
+if(room != Room4) return;
 /* This code is in charge of panning the camera (by changing global.level)
 to match the correct room that corresponds with the height of the flower.*/
 if(floor((obj_flower.height-8)/224) != floor(global.level)){
