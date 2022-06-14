@@ -17,6 +17,8 @@ if (state == enemy_states.alive){
 			var _len = 10;
 			instance_create_depth(x + lengthdir_x(_len, _playerdir), y - 4 + lengthdir_y(_len, _playerdir), depth - 1, obj_flash);
 			screen_shake(8,4);
+			/* Hack to make the penguin crash into the player */
+			if(sign(_player.x - x) == sign(image_xscale)) xcollided = sign(image_xscale);
 		}
 	}
     grounded = (yvel >= 0 && place_meeting(x, y + 1, obj_wall));

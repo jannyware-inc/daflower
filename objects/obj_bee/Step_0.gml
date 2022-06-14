@@ -57,14 +57,20 @@ if (state == enemy_states.alive){
     		grounded_slope_id = _slope;
     	}
     }
-
-    if(xcollided != 0) image_xscale = -image_xscale;
-    xvel = movespd * image_xscale;
-
-
-    yvel = min(yvel + grav, yvel_max);
-
-    xcollided = false;
+	
+	/*Slowly turn a direction for 90 degrees, then turn 90 degrees in another random direction */
+	if(floor(direction/90) != floor(last_direction/90)){
+		turn_sign = -1 + 2*(random(1) < .5);
+		direction = direction + turn_degrees * turn_sign;
+		last_direction = direction;
+	} else {
+		last_direction = direction;
+		direction = direction + turn_degrees * turn_sign;
+		if(xcollided || ycollided || y < camera_get_view_y(view_camera[0]) + 8) direction += 180;
+	}
+	xvel = lengthdir_x(movelen, direction);
+	yvel = lengthdir_y(movelen, direction);
+	xcollided = false;
     ycollided = false;
 
     /* Handle sub-pixel movement */
@@ -109,14 +115,6 @@ if (state == enemy_states.alive){
     	if(!place_meeting(x, y, obj_wall) && place_meeting(x, y + vyNew, obj_wall))
     	{
     		ycollided = yvel;
-    		/*
-    		var _qblock = instance_place(x, y + vyNew, obj_questionblock);
-    		if(vyNew < 0 && _qblock != noone)
-    		{
-    			if(_qblock.state == qblock_states.not_hit)
-    				_qblock.state = qblock_states.hit;
-    		}
-    		*/
     		while(!place_meeting(x, y + sign(vyNew), obj_wall))
     		{
     			y += sign(vyNew);
@@ -159,6 +157,9 @@ if (state == enemy_states.alive){
 	
 	/* Draw helper */
 	sprite_index = spr_bee_fly;
+	if(abs(xvel) > 0.1){
+		image_xscale = sign(xvel);
+	}
 } else if(state == enemy_states.dead) {
 	if(state_timeup == 0){
 		y -= sprite_height/2;

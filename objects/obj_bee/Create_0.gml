@@ -13,3 +13,9 @@ dead = false;
 
 hp = 100;
 maxhp = 100;
+
+direction = 90 + 90*-sign(image_xscale);
+last_direction = direction;
+turn_degrees = 2;
+turn_sign = 1;
+movelen = 1;
