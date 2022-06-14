@@ -111,9 +111,7 @@ if(fixes.can_move && ctrl_xaxis_check != 0)
 			xvel = _nextXvel;
 		}
 	}
-}
-else if(fixes.can_deaccelerate)
-{
+} else if(fixes.can_deaccelerate) {
 	/* Converge movement to 0 */
 	if(xvel > 0)
 	{
@@ -138,6 +136,7 @@ if(fixes.can_jump && ctrl_jump_press && grounded){
 	yvel = jump_yvel;
 	can_cancel_jump = true;
 }
+if(ycollided >= 1) play_sfx(snd_land);
 
 /* The player will stop moving up once the jump key is not held */
 if(can_cancel_jump && !ctrl_jump_check && yvel < 0){
@@ -155,7 +154,7 @@ ycollided = false;
 /* Handle sub-pixel movement */
 cx += xvel;
 cy += yvel;
-vxNew = round(cx);
+vxNew = round(cx); 
 vyNew = round(cy);
 cx -= vxNew;
 cy -= vyNew;
@@ -229,6 +228,7 @@ if(fixes.can_physics && !moved_on_slope){
 	
 	if(_semifloor != noone && vyNew > 0 && y <= _semifloor.bbox_top){ //If moving down, check that your original height is above the bbox_top
 		y = _semifloor.bbox_top;
+		ycollided = yvel;
 		yvel = 0;
 		vyNew = 0;
 	}

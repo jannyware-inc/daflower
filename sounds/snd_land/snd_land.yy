@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_land.wav",
-  "duration": 0.100625,
+  "soundFile": "snd_land.ogg",
+  "duration": 0.313021,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

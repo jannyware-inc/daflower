@@ -1,3 +1,5 @@
+playerindex = 0;
+
 z = 0;
 
 xvel = 0;

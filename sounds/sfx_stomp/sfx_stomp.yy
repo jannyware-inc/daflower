@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 1,
-  "volume": 0.82,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 40,
   "sampleRate": 44100,
@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_stomp.wav",
-  "duration": 0.274649,
+  "soundFile": "sfx_stomp.ogg",
+  "duration": 0.890656,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

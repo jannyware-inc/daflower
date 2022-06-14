@@ -1,3 +1,4 @@
+if(room != Room4) return;
 var _camx = camera_get_view_x(view_camera[0]);
 var _camy = camera_get_view_y(view_camera[0]);
 var _camw = camera_get_view_width(view_camera[0]);

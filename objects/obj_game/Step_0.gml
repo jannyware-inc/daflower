@@ -6,6 +6,7 @@ if(!audio_is_playing(global.bgm)){
 if(keyboard_check_pressed(vk_up)){
 	obj_flower.height++;
 }
+if(room != Room4) return;
 if(keyboard_check_pressed(vk_down)){
 	obj_flower.height--;
 }
