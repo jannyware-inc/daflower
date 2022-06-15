@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_btn_host",
+    "path": "sprites/spr_btn_host/spr_btn_host.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -26,7 +29,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_multiplayer_host",
+  "name": "obj_button_host_room",
   "tags": [],
   "resourceType": "GMObject",
 }
