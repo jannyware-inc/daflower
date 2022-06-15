@@ -46,9 +46,9 @@ if (state == enemy_states.alive){
     if(_slope != noone && yvel >= 0){
     	var percentX;
     	if(_slope.image_xscale >= 0) {
-    		percentX = clamp((x + vxNew - _slope.bbox_left)/abs(_slope.image_xscale) * 1/8, 0, 1);
+    		percentX = clamp((x - _slope.bbox_left)/abs(_slope.image_xscale) * 1/8, 0, 1);
     	} else {
-    		percentX = clamp((_slope.bbox_right - (x + vxNew))/abs(_slope.image_xscale) * 1/8, 0, 1);
+    		percentX = clamp((_slope.bbox_right - (x))/abs(_slope.image_xscale) * 1/8, 0, 1);
     	}
     	var howFarUp = (_slope.bbox_bottom - _slope.bbox_top) * percentX;
     	var proposed_y = _slope.bbox_bottom - howFarUp - 1;
@@ -59,7 +59,7 @@ if (state == enemy_states.alive){
     }
 	
 	/*Slowly turn a direction for 90 degrees, then turn 90 degrees in another random direction */
-	if(floor(direction/90) != floor(last_direction/90)){
+	if(floor((direction+45)/90) != floor((last_direction+45)/90)){
 		turn_sign = -1 + 2*(random(1) < .5);
 		direction = direction + turn_degrees * turn_sign;
 		last_direction = direction;

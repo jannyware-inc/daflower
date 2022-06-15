@@ -7,7 +7,7 @@ global.level_objects = 0;
 global.screen_shake_frames = 0;
 global.screen_shake_intensity = 0;
 
-global.starting_y = 4000;
+global.starting_y = 4002;
 global.level_height = 224;
 last_room = room;
 last_level = global.level;

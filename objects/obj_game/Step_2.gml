@@ -16,7 +16,7 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 }
 global.last_level_index = global.level_index;
 
-camera_set_view_pos(view_camera[0], 0, round(4000 - global.level*224));
+camera_set_view_pos(view_camera[0], 0, round(global.starting_y - global.level*224));
 if(global.screen_shake_frames > 0){
 	global.screen_shake_frames--;
 	var camx = camera_get_view_x(view_camera[0]);

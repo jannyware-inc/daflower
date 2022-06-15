@@ -4,7 +4,7 @@
     "path": "sprites/spr_no_spawn_zone/spr_no_spawn_zone.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

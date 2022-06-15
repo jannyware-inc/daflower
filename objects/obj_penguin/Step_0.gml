@@ -48,9 +48,9 @@ if (state == enemy_states.alive){
     if(_slope != noone && yvel >= 0){
     	var percentX;
     	if(_slope.image_xscale >= 0) {
-    		percentX = clamp((x + vxNew - _slope.bbox_left)/abs(_slope.image_xscale) * 1/8, 0, 1);
+    		percentX = clamp((x - _slope.bbox_left)/abs(_slope.image_xscale) * 1/8, 0, 1);
     	} else {
-    		percentX = clamp((_slope.bbox_right - (x + vxNew))/abs(_slope.image_xscale) * 1/8, 0, 1);
+    		percentX = clamp((_slope.bbox_right - (x))/abs(_slope.image_xscale) * 1/8, 0, 1);
     	}
     	var howFarUp = (_slope.bbox_bottom - _slope.bbox_top) * percentX;
     	var proposed_y = _slope.bbox_bottom - howFarUp - 1;
