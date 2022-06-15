@@ -9,6 +9,8 @@ global.screen_shake_intensity = 0;
 
 global.starting_y = 4002;
 global.level_height = 224;
+
+global.draw_darkness = 0;
 last_room = room;
 last_level = global.level;
 time = 0;

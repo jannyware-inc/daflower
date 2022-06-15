@@ -1,4 +1,4 @@
-playerindex = 0;
+playerindex = 1;
 
 z = 0;
 

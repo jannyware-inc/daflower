@@ -77,5 +77,42 @@ if(!loaded_first_level){
 	}
 }
 
+switch(global.level_index){
+	case 0:
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		layer_x("bg_right", (layer_get_x("bg_right")+.25)%256);
+		break;
+	case 4:
+		layer_x("bg_left", -(-layer_get_x("bg_left")+.125)%256);
+		global.draw_darkness = min(global.draw_darkness + 0.005, 0.10);
+		break;
+	case 5:
+		var _newx = (layer_get_x("bg_right")+3)%256;
+		layer_x("bg_right", _newx);
+		layer_y("bg_right", 20* cos((_newx/256)*2*pi * 1));
+		global.draw_darkness = min(global.draw_darkness + 0.005, 0.25);
+		break;
+	case 6:
+		layer_x("bg_left", -(-layer_get_x("bg_left")+.125)%256);
+		global.draw_darkness = min(global.draw_darkness + 0.005, 0.40);
+		break;
+	case 7:
+		global.draw_darkness = min(global.draw_darkness + 0.005, 0.70);
+		break;
+	case 8:
+		global.draw_darkness = min(global.draw_darkness + 0.005, 1);
+		break;
+	case 9:
+		global.draw_darkness = max(global.draw_darkness - 0.005, .85);
+		break;
+}
+
 /* Parallax bg */
+/*
 layer_y("Background", lerp(264, 1984, global.level/10));
+*/

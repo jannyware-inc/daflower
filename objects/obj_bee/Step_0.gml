@@ -64,9 +64,9 @@ if (state == enemy_states.alive){
 		direction = direction + turn_degrees * turn_sign;
 		last_direction = direction;
 	} else {
+		if(xcollided || ycollided || y < camera_get_view_y(view_camera[0]) + 8) direction += 180;
 		last_direction = direction;
 		direction = direction + turn_degrees * turn_sign;
-		if(xcollided || ycollided || y < camera_get_view_y(view_camera[0]) + 8) direction += 180;
 	}
 	xvel = lengthdir_x(movelen, direction);
 	yvel = lengthdir_y(movelen, direction);

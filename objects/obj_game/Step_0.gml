@@ -12,9 +12,12 @@ if(keyboard_check_pressed(vk_down)){
 }
 
 if(keyboard_check_pressed(vk_left)){
+	obj_flower.height -= 224;
 	global.level--;
 }
 if(keyboard_check_pressed(vk_right)){
+	//global.level++;
+	obj_flower.height += 224;
 	global.level++;
 }
 
