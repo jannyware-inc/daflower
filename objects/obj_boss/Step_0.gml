@@ -119,7 +119,7 @@ if(state == enemy_states.dead) {
 	
 }
 if (state == enemy_states.respawn){
-	/* Look for a place to respawn */
+	/* Look for a place to respawn 
 	if(state_timeup == 0){
 		var _place_found = false;
 		var _camy = camera_get_view_y(view_camera[0]);
@@ -141,6 +141,10 @@ if (state == enemy_states.respawn){
 		return;
 	}
 	state_timeup++;
+    
+    */
+    //global.bgm = global.bgm_table[10];
+    instance_destroy();
 }
 }
 else{
