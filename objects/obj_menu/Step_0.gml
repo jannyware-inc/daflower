@@ -70,10 +70,12 @@ switch(screen){
         
         if token == 0 {
             if ctrl_left_check{
-             volume -= 1;   
+             audio_group_set_gain(audiogroup_default, global.volume*0.01, 0);
+             global.volume -= 1;   
             }
             if ctrl_right_check{
-             volume += 1;
+             audio_group_set_gain(audiogroup_default, global.volume*0.01, 0);
+             global.volume += 1;
             }
         }
         break;
@@ -88,4 +90,4 @@ switch(screen){
         break;
 }
 
-volume = clamp(volume, 0, 100);
+global.volume = clamp(global.volume, 0, 100);

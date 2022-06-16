@@ -11,6 +11,7 @@ positions = ds_map_create();
 
 token = 0;
 
-volume = 75;
+global.volume = 35;
 
+audio_group_set_gain(audiogroup_default, global.volume*0.01, 0);
 audio_play_sound(mus_mainmenu, 0, 1);
