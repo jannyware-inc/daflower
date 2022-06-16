@@ -43,4 +43,4 @@ global.bgm_table = [
 global.bgm = global.bgm_table[0];
 global.bgm_id = noone;
 
-audio_group_set_gain(audiogroup_default, 0.35, 0);
+audio_group_set_gain(audiogroup_default, global.volume*0.01, 0);

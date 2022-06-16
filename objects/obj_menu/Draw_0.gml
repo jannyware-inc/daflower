@@ -43,9 +43,9 @@ switch(screen){
     
     case screens.options:
 
-        draw_text_transformed(128, 82, "Total Volume", 0.5, 0.5, 0);
+        draw_text_transformed(128, 82, "Total volume", 0.5, 0.5, 0);
        
-        draw_rectangle_color(88, 92, 88+ 80*(volume/100), 102, c_blue, c_fuchsia, c_navy, c_aqua, false);
+        draw_rectangle_color(88, 92, 88+ 80*(global.volume/100), 102, c_blue, c_fuchsia, c_navy, c_aqua, false);
         
         draw_text_transformed(128, 160, "Back", 0.5, 0.5, 0);
         
