@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_btn_join",
-    "path": "sprites/spr_btn_join/spr_btn_join.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -21,15 +18,18 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "mp",
-    "path": "folders/Objects/mp.yy",
+    "name": "endScreen",
+    "path": "folders/Objects/endScreen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_button_join_room",
+  "name": "obj_end_screen",
   "tags": [],
   "resourceType": "GMObject",
 }

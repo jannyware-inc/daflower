@@ -40,7 +40,7 @@ if(global.screen_shake_frames > 0){
 /* This code runs at the start of the game once. It looks at all the instances
 in room4, and puts them all into an array of lists - constructing each list
 of all the objects in a certain y range, then deactivates them */
-if(room == Room4 && level_objects_done == false){
+if((room == Room4 || room == mp_game) && level_objects_done == false){
 	level_objects_done = true;
 	for(var i = 0; i < 10; i++){
 		global.cam_y_level[i] = global.starting_y - i * global.level_height;

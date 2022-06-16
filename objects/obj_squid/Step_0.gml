@@ -19,10 +19,7 @@ if(_player != noone) && state != enemy_states.dead{
     }
 }
 
-if state = enemy_states.alive{
-    
-    
-    
+if state = enemy_states.alive{ 
     if chargeTimer == 0 && !charging{
         charging = true;
         

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_btn_join",
-    "path": "sprites/spr_btn_join/spr_btn_join.yy",
+    "name": "spr_btn_time_attack",
+    "path": "sprites/spr_btn_time_attack/spr_btn_time_attack.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,15 +21,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "mp",
-    "path": "folders/Objects/mp.yy",
+    "name": "main menu",
+    "path": "folders/Objects/main menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_button_join_room",
+  "name": "obj_button_time_attack",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "mp",
+    "path": "folders/Objects/mp.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_button_host_room",

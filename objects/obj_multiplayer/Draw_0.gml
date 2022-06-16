@@ -1,4 +1,5 @@
 if(room == mp_lobby){
+	draw_set_font(fnt_prstart);
 	if(hosted_room_id != noone){
 		draw_text(x + 30, y + 10, "Your room code: " + string(hosted_room_id));
 	} else {
