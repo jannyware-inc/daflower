@@ -18,6 +18,7 @@ function sio_init() {
 		sio_addEvent("pong");
 		sio_addEvent("create_room_response");
 		sio_addEvent("join_room_response");
+		sio_addEvent("room_start_game");
 #endregion
 
 

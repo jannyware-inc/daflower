@@ -1,0 +1,1 @@
+global.player_index = 0;

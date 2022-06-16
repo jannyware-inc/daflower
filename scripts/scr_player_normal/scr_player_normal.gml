@@ -12,6 +12,16 @@ function scr_player_normal(){
 	if(state_timeup == 0){
 		state_var_0 = 0;
 	}
+	
+	if(grounded && ctrl_yaxis_check > 0){
+		crouch_timeup++;
+	} else {
+		crouch_timeup = 0;
+	}
+	if(crouch_timeup >= crouch_timeup_max){
+		fixes.can_semifloor = false;
+	}
+	
 	if(grounded && abs(xvel) < 0.1){
 		state_var_0++;
 	} else {

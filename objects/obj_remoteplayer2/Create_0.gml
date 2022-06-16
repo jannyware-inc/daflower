@@ -1,5 +1,3 @@
-playerindex = global.player_index;
-
 z = 0;
 
 xvel = 0;
@@ -27,9 +25,6 @@ can_cancel_jump = false;
 double_jumped = false;
 
 was_shooting = false;
-
-crouch_timeup = 0;
-crouch_timeup_max = 15;
 
 cx = 0;
 cy = 0;
@@ -62,13 +57,6 @@ xcollided = 0;
 ycollided = 0;
 
 shadow_sprite = noone;
-
-enum player_states {
-	normal,
-    level_transition,
-	hitstun,
-	dead,
-}
 
 fixes = {
 	can_move: true,

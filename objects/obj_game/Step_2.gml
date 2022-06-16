@@ -12,11 +12,24 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 } else {
 	global.enemiespaused = false;
 	global.level = floor(global.level);
-	time++;
 }
+time++;
 global.last_level_index = global.level_index;
 
 camera_set_view_pos(view_camera[0], 0, round(global.starting_y - global.level*224));
+
+/*hacky player code to avoid camera shake on transition!!*/
+with(obj_player){
+	if(state == player_states.level_transition){
+		var _percent = min(1, (1 - (state_var_2 - global.level)) * 1);
+		var _to_screen_y =  global.player_start_pos[state_var_2].y - global.cam_y_level[state_var_2];
+		//log("To level, x, y: " + string(state_var_2) + ", " + string(global.player_start_pos[ceil(global.level)].x) + ", " + string(global.player_start_pos[ceil(global.level)].y));
+		x = twerp(TwerpType.out_quad, state_var_0, global.player_start_pos[state_var_2].x,  _percent);
+		y = camera_get_view_y(view_camera[0]) + twerp(TwerpType.out_quad, state_var_1, _to_screen_y, _percent);
+	}
+}
+
+
 if(global.screen_shake_frames > 0){
 	global.screen_shake_frames--;
 	var camx = camera_get_view_x(view_camera[0]);

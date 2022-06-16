@@ -7,6 +7,4 @@ function gmcallback_sio_on_create_player_other() {
 		playerId = data[? "id"];
 		username = data[? "username"];
 	}
-
-
 }
