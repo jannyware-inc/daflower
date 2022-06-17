@@ -173,6 +173,7 @@
     {"id":{"name":"introSequence","path":"sequences/introSequence/introSequence.yy",},"order":0,},
     {"id":{"name":"spr_tilesshadow","path":"sprites/spr_tilesshadow/spr_tilesshadow.yy",},"order":58,},
     {"id":{"name":"obj_button_back","path":"objects/obj_button_back/obj_button_back.yy",},"order":6,},
+    {"id":{"name":"mus_intro","path":"sounds/mus_intro/mus_intro.yy",},"order":23,},
     {"id":{"name":"obj_dropeffect","path":"objects/obj_dropeffect/obj_dropeffect.yy",},"order":56,},
     {"id":{"name":"obj_remoteplayer2","path":"objects/obj_remoteplayer2/obj_remoteplayer2.yy",},"order":24,},
     {"id":{"name":"spr_playermask","path":"sprites/spr_playermask/spr_playermask.yy",},"order":6,},

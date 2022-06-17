@@ -1,4 +1,5 @@
 if(keyboard_check_pressed(vk_space)){
+    audio_stop_sound(mus_intro);
 	room_goto(goto_room);
 	return;
 }
@@ -36,6 +37,7 @@ switch(state){
 			state = card_states.blank;
 			state_timeup = 0;
 			if(card_index == array_length(slidesarray)-1){
+                audio_stop_sound(mus_intro);
 				room_goto(goto_room);
 			} else {
 				//Increment to next card
