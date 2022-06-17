@@ -1,3 +1,4 @@
+if(global.enemiespaused || global.paused || global.game_cutscene) return;
 var _player = instance_place(x, y, obj_player);
 if(_player != noone) && state != enemy_states.dead{
     if(_player.yvel > 0 && !_player.grounded && _player.state != player_states.hitstun && _player.y <= y){

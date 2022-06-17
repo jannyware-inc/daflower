@@ -1,3 +1,4 @@
+if(global.game_cutscene) exit;
 if(global.enemiespaused || global.paused) return;
 if (state == enemy_states.alive){
 	var _player = instance_place(x, y, obj_player);

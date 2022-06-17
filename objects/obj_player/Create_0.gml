@@ -94,3 +94,4 @@ maxhp = 100;
 hpprevious = hp;
 
 invulnerable = false;
+

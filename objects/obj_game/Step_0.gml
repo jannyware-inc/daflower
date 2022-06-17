@@ -1,8 +1,8 @@
 global.level_index = ceil(global.level);
-if(!audio_is_playing(global.bgm)){
-	global.bgm_id = audio_play_sound(global.bgm, 100, true);
-}
-
+/*
+if(global.bgm_id != noone){
+	audio_sound_pitch(global.bgm_id, 1.05);
+}*/
 if(keyboard_check_pressed(vk_up)){
 	obj_flower.height++;
 }
@@ -50,6 +50,7 @@ if(global.level_index != global.last_level_index){ //Called at start of transiti
 	for(var i = 0; i < ds_list_size(global.level_objects[_level]); i++){
 		instance_activate_object(global.level_objects[_level][| i]);
 	}
+	
 }
 if(floor(global.level) > floor(last_level)){ //Called at end of transition
 	
