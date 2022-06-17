@@ -1,6 +1,6 @@
 
 
-var len = 200;
+var len = 500;
 draw_set_alpha(.25);
 for(var i = 0; i < 4; i++){
 	draw_set_color(c_yellow);

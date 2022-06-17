@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_game_cutscene_1(){
+	global.draw_darkness = 0;
 	with(obj_player){
 		x = twerp(TwerpType.out_cubic, xstart, global.player_start_pos[0].x, other.cutscene_timeup/other.intro_cutscene_timeup_max);
 		y = twerp(TwerpType.out_cubic, ystart, global.player_start_pos[0].y, other.cutscene_timeup/other.intro_cutscene_timeup_max);

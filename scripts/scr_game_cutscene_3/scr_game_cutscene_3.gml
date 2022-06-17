@@ -74,7 +74,7 @@ function scr_game_cutscene_3(){
 		if(cutscene_timeup >= 250){
 			//GO TO NEXT ROOM
 			audio_stop_sound(cutscene_var_1);
-			room_goto(RoomScoreboard);
+			room_goto(EndingRoomJanny);
 		} else {			
 			cutscene_timeup++;
 			audio_sound_gain(cutscene_var_1, 1-cutscene_timeup/250, 1);
