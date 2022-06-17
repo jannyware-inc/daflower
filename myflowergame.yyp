@@ -27,6 +27,7 @@
     {"id":{"name":"spr_lv5_clouds","path":"sprites/spr_lv5_clouds/spr_lv5_clouds.yy",},"order":3,},
     {"id":{"name":"obj_fire","path":"objects/obj_fire/obj_fire.yy",},"order":36,},
     {"id":{"name":"gmcallback_sio_on_join_room_response","path":"scripts/gmcallback_sio_on_join_room_response/gmcallback_sio_on_join_room_response.yy",},"order":6,},
+    {"id":{"name":"friend_2","path":"sounds/friend_2/friend_2.yy",},"order":25,},
     {"id":{"name":"obj_laser","path":"objects/obj_laser/obj_laser.yy",},"order":33,},
     {"id":{"name":"snd_leveltransition","path":"sounds/snd_leveltransition/snd_leveltransition.yy",},"order":12,},
     {"id":{"name":"mus_level_4","path":"sounds/mus_level_4/mus_level_4.yy",},"order":7,},

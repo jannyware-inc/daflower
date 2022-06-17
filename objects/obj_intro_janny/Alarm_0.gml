@@ -1,1 +1,1 @@
-audio_play_sound(mus_intro, 0, false);
+audio_play_sound(friend_2, 0, false);
