@@ -15,7 +15,9 @@ if(playerindex == 0){
 	var origin_y = 10;
 }
 
-draw_rectangle_color(origin_x - _bar_length/2 - 1, _camy + origin_y - _bar_height/2 - 1 , origin_x + _bar_length/2 + 1, _camy + origin_y + _bar_height/2 + 1, c_black, c_black, c_black, c_black, false);
-if(water/max_water > 0){
-	draw_rectangle_color(origin_x - _bar_length/2, _camy + origin_y - _bar_height/2, origin_x - _bar_length/2 + floor(water/max_water * _bar_length), _camy + origin_y + _bar_height/2, c_aqua, c_aqua, c_aqua, c_aqua, false);
+if(global.game_cutscene == 0){
+	draw_rectangle_color(origin_x - _bar_length/2 - 1, _camy + origin_y - _bar_height/2 - 1 , origin_x + _bar_length/2 + 1, _camy + origin_y + _bar_height/2 + 1, c_black, c_black, c_black, c_black, false);
+	if(water/max_water > 0){
+		draw_rectangle_color(origin_x - _bar_length/2, _camy + origin_y - _bar_height/2, origin_x - _bar_length/2 + floor(water/max_water * _bar_length), _camy + origin_y + _bar_height/2, c_aqua, c_aqua, c_aqua, c_aqua, false);
+	}
 }

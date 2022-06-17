@@ -22,7 +22,7 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_3F57D633","path":"rooms/Room5/Room5.yy",},
+    {"name":"inst_3F57D633","path":"rooms/RoomScoreboard/RoomScoreboard.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -50,7 +50,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Room5",
+  "name": "RoomScoreboard",
   "tags": [],
   "resourceType": "GMRoom",
 }
