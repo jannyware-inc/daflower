@@ -51,7 +51,7 @@ cutscene_state = 0;
 cutscene_var_0 = 0;
 cutscene_var_1 = 0;
 cutscene_var_2 = 0;
-intro_cutscene_timeup_max = 220;
+intro_cutscene_timeup_max = 250;
 cutscene_2_timeup_max = 220;
 
 

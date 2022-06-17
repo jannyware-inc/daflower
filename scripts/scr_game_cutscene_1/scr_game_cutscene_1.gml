@@ -2,6 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_game_cutscene_1(){
 	global.draw_darkness = 0;
+	
+	if(cutscene_timeup == 0){
+		audio_sound_pitch(audio_play_sound(mus_dropjingler, 100, false), 1.1);
+	}
 	with(obj_player){
 		x = twerp(TwerpType.out_cubic, xstart, global.player_start_pos[0].x, other.cutscene_timeup/other.intro_cutscene_timeup_max);
 		y = twerp(TwerpType.out_cubic, ystart, global.player_start_pos[0].y, other.cutscene_timeup/other.intro_cutscene_timeup_max);
