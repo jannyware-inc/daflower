@@ -23,6 +23,9 @@ if(floor(height) != floor(last_height)){
 image_yscale = floor(height);
 obj_flowertop.x = (bbox_left + bbox_right)/2;
 obj_flowertop.y = bbox_top;
+if(height > global.winning_height) height = global.winning_height;
+
+/*Play growing sfx if last watered 3 frames ago*/
 if(last_growth < 3){
 	if(!audio_is_playing(snd_grow)){
 		growsound = audio_play_sound(snd_grow, 100, true);

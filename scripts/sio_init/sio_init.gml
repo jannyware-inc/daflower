@@ -1,4 +1,5 @@
 /// sio_init()
+/*
 function sio_init() {
 	gml_pragma("global", "sio_init()");
 

@@ -15,9 +15,9 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 }
 
 //Start the winning game cutscene when you win
-if(obj_flower.height >= global.winning_level && global.game_cutscene == 0){
+if(obj_flower.height >= global.winning_height && global.game_cutscene == 0){
 	global.game_cutscene = 3;
-	global.winning_time = time;
+	global.final_time = time;
 }
 if(global.game_cutscene == 0 && !global.paused){
 	time++;
@@ -132,7 +132,7 @@ switch(global.level_index){
 		global.draw_darkness = min(global.draw_darkness + 0.005, 1);
 		break;
 	case 9:
-		global.draw_darkness = max(global.draw_darkness - 0.005, .85);
+		global.draw_darkness = twerp(TwerpType.in_expo, 1, 0, min(1, (obj_flower.height - 2024)/(global.winning_height - 2024)));
 		obj_player.water = obj_player.max_water;
 		break;
 }

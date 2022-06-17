@@ -67,17 +67,19 @@ function scr_game_cutscene_3(){
 					lifetime = -1;
 				}
 			}
+			cutscene_timeup++;
 		}
-		cutscene_timeup++;
 	} else if (cutscene_state == 4){
 		camera_set_view_pos(view_camera[0], CAM_X, global.starting_y);
+		if(cutscene_timeup == 0){
+			audio_sound_gain(cutscene_var_1, 0, 200/60*1000);
+		}
 		if(cutscene_timeup >= 250){
 			//GO TO NEXT ROOM
 			audio_stop_sound(cutscene_var_1);
 			room_goto(EndingRoomJanny);
 		} else {			
 			cutscene_timeup++;
-			audio_sound_gain(cutscene_var_1, 1-cutscene_timeup/250, 1);
 		}
 	}
 	
