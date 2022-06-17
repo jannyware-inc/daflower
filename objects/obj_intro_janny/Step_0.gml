@@ -1,3 +1,8 @@
+if(keyboard_check_pressed(vk_space)){
+	room_goto(goto_room);
+	return;
+}
+
 switch(state){
 	case card_states.blank:
 		if(state_timeup >= slidesarray[card_index].blank_frames){
@@ -31,7 +36,7 @@ switch(state){
 			state = card_states.blank;
 			state_timeup = 0;
 			if(card_index == array_length(slidesarray)-1){
-				room_goto(RoomMainMenu);
+				room_goto(goto_room);
 			} else {
 				//Increment to next card
 				card_index++;
