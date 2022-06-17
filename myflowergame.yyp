@@ -14,6 +14,7 @@
     {"id":{"name":"snd_waterdrop","path":"sounds/snd_waterdrop/snd_waterdrop.yy",},"order":11,},
     {"id":{"name":"spr_flower","path":"sprites/spr_flower/spr_flower.yy",},"order":13,},
     {"id":{"name":"spr_jump","path":"sprites/spr_jump/spr_jump.yy",},"order":2,},
+    {"id":{"name":"spr_fire","path":"sprites/spr_fire/spr_fire.yy",},"order":61,},
     {"id":{"name":"mus_level_5","path":"sounds/mus_level_5/mus_level_5.yy",},"order":17,},
     {"id":{"name":"snd_collectwater","path":"sounds/snd_collectwater/snd_collectwater.yy",},"order":10,},
     {"id":{"name":"spr_lv5_clouds","path":"sprites/spr_lv5_clouds/spr_lv5_clouds.yy",},"order":3,},
