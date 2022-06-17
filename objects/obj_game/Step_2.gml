@@ -13,6 +13,12 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 	global.enemiespaused = false;
 	global.level = floor(global.level);
 }
+
+//Start the winning game cutscene when you win
+if(obj_flower.height >= global.winning_level && global.game_cutscene == 0){
+	global.game_cutscene = 2;
+	global.winning_time = time;
+}
 if(global.game_cutscene == 0 || global.paused){
 	time++;
 }
@@ -126,11 +132,14 @@ switch(global.level_index){
 		break;
 	case 9:
 		global.draw_darkness = max(global.draw_darkness - 0.005, .85);
+		obj_player.water = obj_player.max_water;
 		break;
 }
 
 switch(global.game_cutscene){
-	case 1: scr_game_cutscene_1();
+	case 1: scr_game_cutscene_1(); break;
+	case 2: scr_game_cutscene_2(); break;
+	case 3: scr_game_cutscene_3(); break;
 }
 
 /* Parallax bg */

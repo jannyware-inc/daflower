@@ -2,6 +2,8 @@ global.paused = false;
 
 global.level = 0;
 global.enemiespaused = true;
+global.winning_level = 2120;
+global.winning_time = 0;
 
 global.level_objects = 0;
 global.screen_shake_frames = 0;

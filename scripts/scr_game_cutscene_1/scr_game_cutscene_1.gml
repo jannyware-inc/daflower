@@ -31,14 +31,13 @@ function scr_game_cutscene_1_draw(){
 	draw_rectangle_color(CAM_X, CAM_Y, CAM_X + CAM_W, CAM_Y + CAM_H, c_black, c_black, c_black, c_black, false);
 	draw_set_alpha(1);
 	draw_set_halign(fa_center);
-	if(intro_cutscene_timeup%6<2){
-		draw_set_color(c_black);
-	} else if (intro_cutscene_timeup%6<4){
-		draw_set_color(c_red);
-	} else {
-		draw_set_color(c_aqua);
-	}
 	
+	if(intro_cutscene_timeup%6<3){
+		draw_set_alpha(1);
+	} else {
+		draw_set_alpha(0);
+	}
+	draw_set_color(c_orange);
 	
 	switch(floor((intro_cutscene_timeup/intro_cutscene_timeup_max)*3)){
 		case 0:
@@ -53,4 +52,5 @@ function scr_game_cutscene_1_draw(){
 	}
 	draw_set_halign(fa_left);
 	draw_set_color(c_white);
+	draw_set_alpha(1);
 }

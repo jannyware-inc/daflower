@@ -16,6 +16,8 @@ draw_text(256/2, _camy + 10, string_repeat("0", 2-string_length(string(minutes))
 draw_set_halign(fa_left);
 
 switch(global.game_cutscene){
-	case 1: scr_game_cutscene_1_draw();
+	case 1: scr_game_cutscene_1_draw(); break;
+	case 2: scr_game_cutscene_2_draw(); break;
+	case 3: scr_game_cutscene_3_draw(); break;
 }
 //scribble("Hello there").draw(_camx + _camw - 60, _camy + 10, typist);
