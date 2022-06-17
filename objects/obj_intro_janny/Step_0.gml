@@ -42,3 +42,5 @@ switch(state){
 		}
 		break;
 }
+
+tooltip_alpha = max(tooltip_alpha - tooltip_fade, tooltop_min_alpha);
