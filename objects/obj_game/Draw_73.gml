@@ -14,4 +14,8 @@ draw_text(256/2, _camy + 10, string_repeat("0", 2-string_length(string(minutes))
 			+ string_repeat("0", 2-string_length(string(seconds))) + string(seconds) + "."
 			+ string_repeat("0", 3-string_length(string(milliseconds))) + string(milliseconds));
 draw_set_halign(fa_left);
+
+switch(global.game_cutscene){
+	case 1: scr_game_cutscene_1_draw();
+}
 //scribble("Hello there").draw(_camx + _camw - 60, _camy + 10, typist);

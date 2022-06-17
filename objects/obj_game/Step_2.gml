@@ -13,7 +13,10 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 	global.enemiespaused = false;
 	global.level = floor(global.level);
 }
-time++;
+if(global.game_cutscene == 0 || global.paused){
+	time++;
+}
+
 global.last_level_index = global.level_index;
 
 camera_set_view_pos(view_camera[0], 0, round(global.starting_y - global.level*224));
@@ -88,6 +91,7 @@ if(!loaded_first_level){
 	with(obj_player_start){
 		global.player_start_pos[level] = id;
 	}
+	//global.bgm_id = audio_play_sound(global.bgm, 100, true);
 }
 
 switch(global.level_index){
@@ -123,6 +127,10 @@ switch(global.level_index){
 	case 9:
 		global.draw_darkness = max(global.draw_darkness - 0.005, .85);
 		break;
+}
+
+switch(global.game_cutscene){
+	case 1: scr_game_cutscene_1();
 }
 
 /* Parallax bg */

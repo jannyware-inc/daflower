@@ -3,9 +3,14 @@
 
 if(draw_player){
 	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0, c_white, 1);
+	/*
 	if(shadow_sprite != noone){
 		draw_sprite_ext(shadow_sprite,image_index,x,y,image_xscale,image_yscale, 0, c_white, 0.175);
 	}
+	*/
+
+	if(ds_map_exists(global.player_shadow_map, sprite_index))
+		draw_sprite_ext(global.player_shadow_map[? sprite_index], image_index,x,y,image_xscale,image_yscale, 0, c_white, 0.175);
 }
 
 if(keyboard_check(ord("J"))) global.draw_darkness = min(draw_darkness+0.01, 1); 

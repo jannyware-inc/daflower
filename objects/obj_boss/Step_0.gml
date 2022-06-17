@@ -1,3 +1,4 @@
+if(global.enemiespaused || global.paused || global.game_cutscene) return;
 if !ismoving{
 if count1 % 30 == 0 {
     y += sign(token)  
@@ -91,7 +92,7 @@ if(state == enemy_states.dead) {
         x -= 5;
 		yvel = -3;
 		xvel = .5 * sign(image_xscale);
-		scr_drop_water();
+		scr_drop_water_number(2);
 	}
 	yvel += .2;
 	y += yvel;
