@@ -28,6 +28,9 @@ count1 = 0;
 count2 = 0;
 tpdelay = 240;
 count3 = 0;
+hits = 0;
+bubble = true;
+
 
 firedcount = 0;
 

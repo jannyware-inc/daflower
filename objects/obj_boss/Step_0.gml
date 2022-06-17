@@ -11,7 +11,12 @@ if(_player != noone) && state != enemy_states.dead{
         var _playerdir = point_direction(x, y-4, _player.x, _player.y - 8);
         var _len = 10;
         instance_create_depth(x + lengthdir_x(_len, _playerdir), y - 4 + lengthdir_y(_len, _playerdir), depth - 1, obj_flash);
-        state = enemy_states.dead;
+        if !bubble{
+            state = enemy_states.dead;
+        }
+        else{
+            bubble = false;   
+        }
         _player.bounced = true;
         play_sfx(sfx_stomp);
         return;
@@ -29,13 +34,13 @@ if(_player != noone) && state != enemy_states.dead{
 if state = enemy_states.alive{
     
     tpdelay--;
-    count3++;
+    count3 += 0.5;
     count2++;
     count1++;
 
     if firedcount % 2 == 0 && !tpdelay{
         count2 = 0;
-        tpdelay = 100;
+        tpdelay = 200;
     
         var newx, newy, foundspot;
     
@@ -50,7 +55,7 @@ if state = enemy_states.alive{
             newx = obj_player.x + random_range(20, 70)*sign(random_range(-1.1,1));
             newy = obj_player.y + random_range(20, 70)*sign(random_range(-1.1,1));
         
-            if !place_meeting(newx, newy, obj_wall){
+            if !place_meeting(newx, newy, obj_wall) && (newx > 0) && (newx < CAM_W) && (newy > CAM_Y+16) && (newy < ( (CAM_Y)+(CAM_H-16) ) ){
                 foundspot = true;   
             }
         }
@@ -69,9 +74,9 @@ if state = enemy_states.alive{
 
     if count3 == 108{
     
-        var las = instance_create_layer(x,y+1,"animations", obj_laser);
+        var las = instance_create_layer(x-2,y-12,"animations", obj_laser);
         firedcount++;
-        tpdelay = 30;
+        //tpdelay = 30;
     
         with (las){
             direction = point_direction(x,y,obj_player.x,obj_player.y-12);

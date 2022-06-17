@@ -89,5 +89,6 @@ tooltip_alpha = 1.5;
 tooltop_min_alpha = .05;
 tooltip_fade = .01;
 
-audio_play_sound(mus_intro, 0, false);
+alarm[0] = 60;
+
 goto_room = RoomMainMenu;
