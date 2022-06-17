@@ -14,16 +14,16 @@ if(keyboard_check_pressed(ord("O"))){
 }
 
 /* Player controller inputs */
-ctrl_left_check = keyboard_check(ord("A"));
-ctrl_right_check = keyboard_check(ord("D"));
+ctrl_left_check = keyboard_check(ord("A")) || keyboard_check(vk_left);
+ctrl_right_check = keyboard_check(ord("D")) || keyboard_check(vk_right);
 
-ctrl_up_check = keyboard_check(ord("W"));
-ctrl_down_check = keyboard_check(ord("S"));
+ctrl_up_check = keyboard_check(ord("W")) || keyboard_check(vk_up);
+ctrl_down_check = keyboard_check(ord("S")) || keyboard_check(vk_down);
 
-ctrl_jump_check = keyboard_check(vk_space);
-ctrl_jump_press = keyboard_check_pressed(vk_space);
+ctrl_jump_check = keyboard_check(vk_space) || keyboard_check(ord("Z"));
+ctrl_jump_press = keyboard_check_pressed(vk_space) || keyboard_check(ord("Z"));
 
-ctrl_action_check = keyboard_check(vk_shift);
+ctrl_action_check = keyboard_check(vk_shift) || keyboard_check(ord("X"));
 
 ctrl_xaxis_check = ctrl_right_check - ctrl_left_check;
 ctrl_yaxis_check = ctrl_down_check - ctrl_up_check;

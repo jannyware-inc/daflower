@@ -80,6 +80,10 @@ enum card_states {
 card_index = 0;
 state = card_states.blank;
 state_timeup = 0;
+music_delay = 23;
+song = mus_friend_2;
+song_repeat = false;
+
 #macro INTRO_STATE_BLANK_TIMEUP_MAX 30
 #macro INTRO_STATE_FADE_IN_TIMEUP_MAX 30
 #macro INTRO_STATE_DISPLAY_TIMEUP_MAX 120
@@ -89,6 +93,6 @@ tooltip_alpha = 1.5;
 tooltop_min_alpha = .05;
 tooltip_fade = .01;
 
-alarm[0] = 23;
+alarm[0] = music_delay;
 
 goto_room = RoomMainMenu;

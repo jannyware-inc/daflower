@@ -11,8 +11,9 @@ if(draw_player){
 
 	if(ds_map_exists(global.player_shadow_map, sprite_index))
 		draw_sprite_ext(global.player_shadow_map[? sprite_index], image_index, x+.5 * z, y + .5 * z,image_xscale,image_yscale, 0, c_white, 0.175);
+	
+	if(global.draw_darkness > 0){
+	draw_sprite_ext(sprite_index,image_index,x+.5 * z, y + .5 * z,image_xscale,image_yscale,0, c_black, global.draw_darkness);
+	}
 }
 
-if(global.draw_darkness > 0){
-	draw_sprite_ext(sprite_index,image_index,x+.5 * z, y + .5 * z,image_xscale,image_yscale,0, c_black, global.draw_darkness);
-}

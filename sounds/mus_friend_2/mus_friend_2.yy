@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "friend_2.mp3",
+  "soundFile": "mus_friend_2.mp3",
   "duration": 32.472,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "friend_2",
+  "name": "mus_friend_2",
   "tags": [],
   "resourceType": "GMSound",
 }

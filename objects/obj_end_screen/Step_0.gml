@@ -7,8 +7,8 @@ if(mouse_check_button_pressed(mb_left) && collision_point(mouse_x, mouse_y, obj_
 
 if(mouse_check_button_pressed(mb_left) && collision_point(mouse_x, mouse_y, obj_button_submit, false, false) && !submitted != 0){
 	submitted = true;
-	username = get_string("Enter your name", "Cool grower");
+	username = get_string("Enter your name (15 char max)", "Cool grower");
 
 	var str = "name=" + string(username) + "&time=" + string(final_time);
-	http_post_string("https://jannycorp.net:5005/sunflower/savescores", str);
+	post_id = http_post_string("https://jannycorp.net:5005/sunflower/savescores", str);
 }

@@ -15,6 +15,16 @@ draw_text(256/2, _camy + 10, string_repeat("0", 2-string_length(string(minutes))
 			+ string_repeat("0", 3-string_length(string(milliseconds))) + string(milliseconds));
 draw_set_halign(fa_left);
 
+if(global.game_cutscene != 2 && global.game_cutscene != 3){
+	draw_set_halign(fa_right);
+	if(global.level_index == 9){
+		draw_text(256 - 10, CAM_Y + 10, "Home :)");
+	} else {
+		draw_text(256 - 10, CAM_Y + 10, "Lv. " + string(global.level_index + 1) + "/9");
+	}
+	draw_set_halign(fa_left);
+}
+
 switch(global.game_cutscene){
 	case 1: scr_game_cutscene_1_draw(); break;
 	case 2: scr_game_cutscene_2_draw(); break;

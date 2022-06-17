@@ -132,7 +132,7 @@ switch(global.level_index){
 		global.draw_darkness = min(global.draw_darkness + 0.005, 1);
 		break;
 	case 9:
-		global.draw_darkness = twerp(TwerpType.in_expo, 1, 0, min(1, (obj_flower.height - 2024)/(global.winning_height - 2024)));
+		global.draw_darkness = twerp(TwerpType.in_expo, .85, 0, min(1, (obj_flower.height - 2024)/(global.winning_height - 2024)));
 		obj_player.water = obj_player.max_water;
 		break;
 }

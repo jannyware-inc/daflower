@@ -1,1 +1,1 @@
-audio_play_sound(friend_2, 0, false);
+audio_play_sound(song, 100, song_repeat);

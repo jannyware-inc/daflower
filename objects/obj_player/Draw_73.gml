@@ -7,12 +7,12 @@ if(playerindex == 0){
 	var _bar_length = 60;
 	var _bar_height = 6;
 	var origin_x = 40;
-	var origin_y = 10;
+	var origin_y = 13;
 } else {
 	var _bar_length = 60;
 	var _bar_height = 6;
 	var origin_x = _camw - 40;
-	var origin_y = 10;
+	var origin_y = 13;
 }
 
 if(global.game_cutscene == 0){
