@@ -16,16 +16,17 @@ if(floor((obj_flower.height-8)/224) != floor(global.level)){
 
 //Start the winning game cutscene when you win
 if(obj_flower.height >= global.winning_level && global.game_cutscene == 0){
-	global.game_cutscene = 2;
+	global.game_cutscene = 3;
 	global.winning_time = time;
 }
-if(global.game_cutscene == 0 || global.paused){
+if(global.game_cutscene == 0 && !global.paused){
 	time++;
 }
 
 global.last_level_index = global.level_index;
 
 camera_set_view_pos(view_camera[0], 0, round(global.starting_y - global.level*224));
+
 
 /*hacky player code to avoid camera shake on transition!!*/
 with(obj_player){

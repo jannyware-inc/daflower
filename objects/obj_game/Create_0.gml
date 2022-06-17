@@ -46,7 +46,13 @@ global.bgm = global.bgm_table[0];
 global.bgm_id = noone;
 
 global.game_cutscene = 1;
-intro_cutscene_timeup = 0;
+cutscene_timeup = 0;
+cutscene_state = 0;
+cutscene_var_0 = 0;
+cutscene_var_1 = 0;
+cutscene_var_2 = 0;
 intro_cutscene_timeup_max = 220;
+cutscene_2_timeup_max = 220;
+
 
 audio_group_set_gain(audiogroup_default, global.volume*0.01, 0);
