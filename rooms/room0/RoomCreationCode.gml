@@ -1,1 +1,1 @@
-room_goto(RoomMainMenu);
+room_goto(IntroRoomJanny);
