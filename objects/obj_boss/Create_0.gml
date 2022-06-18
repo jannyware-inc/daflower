@@ -29,7 +29,7 @@ count2 = 0;
 tpdelay = 240;
 count3 = 0;
 hits = 0;
-bubble = true;
+bubble = false;
 
 
 firedcount = 0;

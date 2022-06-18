@@ -1,3 +1,5 @@
+if(global.paused) return;
+
 if (can_follow_player && distance_to_point(obj_player.x, obj_player.y - 8) < 20){
 	following_player_id = obj_player;
 } else {

@@ -1,3 +1,7 @@
+ if(global.game_cutscene == 0 && keyboard_check_pressed(ord("P"))){
+	global.paused = !global.paused;
+ }
+if(global.paused) return;
 global.level_index = ceil(global.level);
 /*
 if(global.bgm_id != noone){

@@ -1,1 +1,3 @@
-game_restart();
+if(global.debug){
+	game_restart();
+}

@@ -2,7 +2,7 @@ global.paused = false;
 
 global.level = 0;
 global.enemiespaused = true;
-global.winning_height = 2120;
+global.winning_height = 2210;
 global.final_time = 0;
 
 global.level_objects = 0;

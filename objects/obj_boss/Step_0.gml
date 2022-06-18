@@ -11,14 +11,17 @@ if(_player != noone) && state != enemy_states.dead{
         var _playerdir = point_direction(x, y-4, _player.x, _player.y - 8);
         var _len = 10;
         instance_create_depth(x + lengthdir_x(_len, _playerdir), y - 4 + lengthdir_y(_len, _playerdir), depth - 1, obj_flash);
+		/*
         if !bubble{
             state = enemy_states.dead;
         }
         else{
             bubble = false;   
         }
+		*/
         _player.bounced = true;
-        play_sfx(sfx_stomp);
+        
+		play_sfx(sfx_stomp);
         return;
     } 
     else if(_player.invincibility_timer == 0 && !_player.fixes.invulnerable){
@@ -46,22 +49,18 @@ if state = enemy_states.alive{
     
         foundspot = false;
     
-        newx = obj_player.x + random_range(20, 70)*sign(random_range(-1.1,1));
-        newy = obj_player.y + random_range(20, 70)*sign(random_range(-1.1,1));
+       
     
-        if place_meeting(newx,newy,obj_wall){
     
-        while !foundspot{
-            newx = random_range(CAM_X, CAM_W);
-            newy = random_range(CAM_Y, CAM_H);
+	    while !foundspot{
+			newx = obj_player.x + random_range(20, 70)*sign(random_range(-1.1,1));
+			newy = obj_player.y + random_range(20, 70)*sign(random_range(-1.1,1));
         
-            if !place_meeting(newx, newy, obj_wall){
-                foundspot = true;   
-            }
-        }
-    
-        }
-    
+	        if !place_meeting(newx, newy, obj_wall) && newx == clamp(newx, CAM_X + 16, CAM_X + CAM_W - 16) && newy == clamp(newy, CAM_Y + 16, CAM_Y + CAM_H - 16){
+	           foundspot = true;   
+	        }
+	    }
+		
         targetx = newx;
         targety = newy;
         

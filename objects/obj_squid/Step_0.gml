@@ -74,65 +74,13 @@ if state = enemy_states.alive{
     cx -= vxNew;
     cy -= vyNew;
     
-    if(!place_meeting(x, y, obj_wall) && place_meeting(x, y + vyNew, obj_wall))
-    	{
-    		ycollided = yvel;
-    		/*
-    		var _qblock = instance_place(x, y + vyNew, obj_questionblock);
-    		if(vyNew < 0 && _qblock != noone)
-    		{
-    			if(_qblock.state == qblock_states.not_hit)
-    				_qblock.state = qblock_states.hit;
-    		}
-    		*/
-    		while(!place_meeting(x, y + sign(vyNew), obj_wall))
-    		{
-    			y += sign(vyNew);
-    		}
-    		yvel = 0;
-    		vyNew = 0;
-    	}
-    	var _semifloor = noone;
-	
-    	/* Find the semifloor that is closest under the player */
-    	var _list = ds_list_create();
-    	var _num = instance_place_list(x, y + vyNew, obj_semifloor, _list, false);
-    	if (_num > 0)
-    	{
-    	    for (var i = 0; i < _num; ++i)
-    	    {
-    			if(_semifloor == noone){
-    				_semifloor = _list[| i];
-    			} else if (_list[| i].bbox_top >= y && _list[| i].bbox_top > _semifloor.bbox_top){
-    				_semifloor = _list[| i];
-    			}
-    	    }
-    	}
-    	ds_list_destroy(_list); 
-	
-    	if(_semifloor != noone && vyNew > 0 && y <= _semifloor.bbox_top){ //If moving down, check that your original height is above the bbox_top
-    		y = _semifloor.bbox_top;
-    		yvel = 0;
-    		vyNew = 0;
-    	}
-    	y += vyNew;
-
-    	/* X axis collision code */
-    	if(!place_meeting(x, y, obj_wall) && place_meeting(x + vxNew, y, obj_wall))
-    	{
-    		xcollided = xvel;
-    		while(!place_meeting(x + sign(vxNew), y, obj_wall))
-    		{
-    			x += sign(vxNew);
-    		}
-    		xvel = 0;
-    		vxNew = 0;
-    	}
-    	if(vxNew == 0 && place_meeting(x+sign(xvel), y, obj_wall)){
-    		xvel = 0;
-    	}
-    	x += vxNew;
+    x+=vxNew;
+    y+=vyNew;
     
+	if(y > camera_get_view_y(view_camera[0]) + 256){
+    	y = camera_get_view_y(view_camera[0]);
+    	x = random_range(20, 204);
+    }
 
 }
 if(state == enemy_states.dead) {

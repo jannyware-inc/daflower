@@ -25,6 +25,18 @@ if(global.game_cutscene != 2 && global.game_cutscene != 3){
 	draw_set_halign(fa_left);
 }
 
+/*Draw pause screen */
+if(global.paused){
+	draw_set_color(c_black);
+	draw_set_alpha(0.2);
+	draw_rectangle(CAM_X - 1, CAM_Y - 1, CAM_X + CAM_W, CAM_Y + CAM_H, false);
+	draw_set_halign(fa_center);
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+	draw_text(CAM_X + CAM_W/2, CAM_Y+CAM_H/2 - 10, "Game is paused.\n(P to unpause)");
+	draw_set_halign(fa_left);
+}
+
 switch(global.game_cutscene){
 	case 1: scr_game_cutscene_1_draw(); break;
 	case 2: scr_game_cutscene_2_draw(); break;

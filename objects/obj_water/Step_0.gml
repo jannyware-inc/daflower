@@ -1,3 +1,5 @@
+if(global.paused) return;
+
 yvel += grav;
 
 y += yvel;

@@ -1,4 +1,4 @@
-if(room != Menu && room != mp_lobby && room != RoomMainMenu){
+if(room != mp_lobby && room != RoomMainMenu){
 	audio_stop_sound(sound_id);
 	instance_destroy();
 }

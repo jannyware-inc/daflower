@@ -1,4 +1,4 @@
-if(room != Room4) return;
+if(room != Room4 || global.paused) return;
 /* This code is in charge of panning the camera (by changing global.level)
 to match the correct room that corresponds with the height of the flower.*/
 if(floor((obj_flower.height-8)/224) != floor(global.level)){
@@ -116,9 +116,18 @@ switch(global.level_index){
 		global.draw_darkness = min(global.draw_darkness + 0.005, 0.10);
 		break;
 	case 5:
+		/*
 		var _newx = (layer_get_x("bg_right")+3)%256;
 		layer_x("bg_right", _newx);
 		layer_y("bg_right", 20* cos((_newx/256)*2*pi * 1));
+		*/
+		if(random(1) < .007){
+			if(random(1) < .5){
+				instance_create_layer(-30, CAM_Y + random_range(40, 224 - 40), "bg_instance", obj_ufo);
+			} else {
+				instance_create_layer(256+30, CAM_Y + random_range(40, 224 - 40), "bg_instance", obj_ufo);
+			}
+		}
 		global.draw_darkness = min(global.draw_darkness + 0.005, 0.25);
 		break;
 	case 6:
@@ -132,7 +141,7 @@ switch(global.level_index){
 		global.draw_darkness = min(global.draw_darkness + 0.005, 1);
 		break;
 	case 9:
-		global.draw_darkness = twerp(TwerpType.in_expo, .85, 0, min(1, (obj_flower.height - 2024)/(global.winning_height - 2024)));
+		global.draw_darkness = max(global.draw_darkness - 0.0075, twerp(TwerpType.in_quad, .85, 0, min(1, (obj_flower.height - 2024)/(global.winning_height - 2024))));
 		obj_player.water = obj_player.max_water;
 		break;
 }
