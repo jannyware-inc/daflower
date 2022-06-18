@@ -52,10 +52,10 @@ if state = enemy_states.alive{
         if place_meeting(newx,newy,obj_wall){
     
         while !foundspot{
-            newx = obj_player.x + random_range(20, 70)*sign(random_range(-1.1,1));
-            newy = obj_player.y + random_range(20, 70)*sign(random_range(-1.1,1));
+            newx = random_range(CAM_X, CAM_W);
+            newy = random_range(CAM_Y, CAM_H);
         
-            if !place_meeting(newx, newy, obj_wall) && (newx > 0) && (newx < CAM_W) && (newy > CAM_Y+16) && (newy < ( (CAM_Y)+(CAM_H-16) ) ){
+            if !place_meeting(newx, newy, obj_wall){
                 foundspot = true;   
             }
         }
