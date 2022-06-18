@@ -15,5 +15,9 @@ if(draw_player){
 	if(global.draw_darkness > 0){
 	draw_sprite_ext(sprite_index,image_index,x+.5 * z, y + .5 * z,image_xscale,image_yscale,0, c_black, global.draw_darkness);
 	}
+    
+    if distance_to_object(obj_portal) < 30{
+        draw_sprite_ext(sprite_index,image_index,x+.5 * z, y + .5 * z,image_xscale,image_yscale,0, c_purple, 1 - (distance_to_object(obj_portal)/30));
+    }
 }
 

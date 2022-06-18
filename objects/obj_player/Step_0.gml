@@ -29,6 +29,10 @@ ctrl_xaxis_check = ctrl_right_check - ctrl_left_check;
 ctrl_yaxis_check = ctrl_down_check - ctrl_up_check;
 
 
+if ctrl_action_check{
+    watertime = 185;   
+}
+
 /* Pre-step checks */
 if(bounced){
 	can_cancel_jump = true;

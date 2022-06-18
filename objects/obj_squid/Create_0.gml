@@ -21,3 +21,5 @@ charging = false;
 chargeTimer = 0;
 chargeTime = 80;
 jumpHeight = 2;
+
+count = 0; // for firing ink

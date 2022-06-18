@@ -95,3 +95,4 @@ hpprevious = hp;
 
 invulnerable = false;
 
+watertime = 0;

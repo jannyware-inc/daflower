@@ -21,6 +21,20 @@ if(_player != noone) && state != enemy_states.dead{
 }
 
 if state = enemy_states.alive{ 
+    
+    if count == 80{
+        var inst = instance_create_layer(x,y-6,"instances", obj_inkblot);
+        
+        with (inst){
+            direction = point_direction (x ,y, obj_player.x, obj_player.y-6);
+            speed = 3;
+        }
+    }
+    
+    
+    
+    
+    
     if chargeTimer == 0 && !charging{
         charging = true;
         
@@ -55,7 +69,12 @@ if state = enemy_states.alive{
         xvel  = 0;   
     }
     chargeTimer++;
+    count ++;
     
+    
+    if count == 120 {
+        count = 0;   
+    }
     if chargeTimer == 120{
         chargeTimer = 0;
         

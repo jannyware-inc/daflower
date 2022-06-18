@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_friend_2.mp3",
-  "duration": 32.472,
+  "duration": 38.952,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
