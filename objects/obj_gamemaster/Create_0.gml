@@ -15,4 +15,4 @@ global.player_shadow_map[? 	spr_watering] = spr_watering_shadow;
 global.player_shadow_map[? 	spr_walk]  = spr_walk_shadow;
 global.player_shadow_map[? 	spr_standing]  = spr_standing_shadow;
 
-global.debug = 0;
+global.debug = 1;

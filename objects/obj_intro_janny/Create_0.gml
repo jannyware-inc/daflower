@@ -90,7 +90,7 @@ song_repeat = false;
 #macro INTRO_STATE_FADE_OUT_TIMEUP_MAX 30
 
 tooltip_alpha = 1.5;
-tooltop_min_alpha = .05;
+tooltop_min_alpha = .00;
 tooltip_fade = .01;
 
 alarm[0] = music_delay;
