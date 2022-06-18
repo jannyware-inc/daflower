@@ -20,8 +20,8 @@ ctrl_right_check = keyboard_check(ord("D")) || keyboard_check(vk_right);
 ctrl_up_check = keyboard_check(ord("W")) || keyboard_check(vk_up);
 ctrl_down_check = keyboard_check(ord("S")) || keyboard_check(vk_down);
 
-ctrl_jump_check = keyboard_check(vk_space) || keyboard_check(ord("Z"));
-ctrl_jump_press = keyboard_check_pressed(vk_space) || keyboard_check(ord("Z"));
+ctrl_jump_check = keyboard_check(vk_space) || keyboard_check(ord("Z")) || keyboard_check(ord("W")) || keyboard_check(vk_up);
+ctrl_jump_press = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("Z")) || keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 
 ctrl_action_check = keyboard_check(vk_shift) || keyboard_check(ord("X"));
 

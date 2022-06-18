@@ -45,14 +45,14 @@ function scr_game_cutscene_1_draw(){
 	}
 	draw_set_color(c_orange);
 	
-	switch(floor((cutscene_timeup/intro_cutscene_timeup_max)*4)){
-		case 0:
+	switch(floor((cutscene_timeup/intro_cutscene_timeup_max)*5)){
+		case 1:
 			draw_text(CAM_W/2, CAM_Y + CAM_H/2-20, "HOW HIGH");
 			break;
-		case 1:
+		case 2:
 		draw_text(CAM_W/2, CAM_Y + CAM_H/2-20, "WILL YOUR");
 			break;
-		case 2:
+		case 3:
 			draw_text(CAM_W/2, CAM_Y + CAM_H/2-20, "FLOWER GROW?");
 			break;
 	}

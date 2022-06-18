@@ -3,22 +3,25 @@ global.level_index = ceil(global.level);
 if(global.bgm_id != noone){
 	audio_sound_pitch(global.bgm_id, 1.05);
 }*/
-if(keyboard_check_pressed(vk_up)){
-	obj_flower.height++;
-}
-if(room != Room4) return;
-if(keyboard_check_pressed(vk_down)){
-	obj_flower.height--;
-}
 
-if(keyboard_check_pressed(vk_left)){
-	obj_flower.height -= 224;
-	global.level--;
-}
-if(keyboard_check_pressed(vk_right)){
-	//global.level++;
-	obj_flower.height += 224;
-	global.level++;
+if(global.debug){
+	if(keyboard_check_pressed(vk_up)){
+		obj_flower.height++;
+	}
+	if(room != Room4) return;
+	if(keyboard_check_pressed(vk_down)){
+		obj_flower.height--;
+	}
+
+	if(keyboard_check_pressed(vk_left)){
+		obj_flower.height -= 224;
+		global.level--;
+	}
+	if(keyboard_check_pressed(vk_right)){
+		//global.level++;
+		obj_flower.height += 224;
+		global.level++;
+	}
 }
 
 if(floor(global.level) != floor(global.level)){
