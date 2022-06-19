@@ -19,5 +19,7 @@ if(draw_player){
     if distance_to_object(obj_portal) < 30{
         draw_sprite_ext(sprite_index,image_index,x+.5 * z, y + .5 * z,image_xscale,image_yscale,0, c_purple, 1 - (distance_to_object(obj_portal)/30));
     }
+    
+   // draw_text_transformed(x, y-16, instance_number(obj_inkblot), 0.25, 0.25, 0);
 }
 

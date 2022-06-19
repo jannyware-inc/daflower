@@ -19,3 +19,12 @@ if(place_meeting(x, y, obj_flowertop)){
 if(y > camera_get_view_y(view_camera[0]) + 256){
 	instance_destroy();
 }
+
+var ink = instance_place(x, y, obj_inkblot);
+
+if ink != noone{
+    with(ink){
+        var inst = instance_create_layer(x,y,"animations",obj_particles);
+        instance_destroy();
+    }
+}

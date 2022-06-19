@@ -4,4 +4,4 @@ partner = 1;
 
 
 cooldownTimer = -1;
-cooldown = 30;
+cooldown = 60;

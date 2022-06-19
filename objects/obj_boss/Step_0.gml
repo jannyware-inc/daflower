@@ -11,7 +11,12 @@ if(_player != noone) && state != enemy_states.dead{
         var _playerdir = point_direction(x, y-4, _player.x, _player.y - 8);
         var _len = 10;
         instance_create_depth(x + lengthdir_x(_len, _playerdir), y - 4 + lengthdir_y(_len, _playerdir), depth - 1, obj_flash);
-		/*
+		if !beenhit{
+            var inst = instance_create_layer(x+8,y-8,"animations", obj_bosstext2);   
+            beenhit = true;
+        }
+        
+        /*
         if !bubble{
             state = enemy_states.dead;
         }
@@ -35,6 +40,14 @@ if(_player != noone) && state != enemy_states.dead{
 }
 
 if state = enemy_states.alive{
+    
+    if !playedtext{
+        if distance_to_object(obj_player) < 120 {
+            var inst = instance_create_layer(x+8,y- 8,"animations", obj_bosstext);
+            playedtext = true;
+        }
+    }
+   
     
     tpdelay--;
     count3 += 0.5;

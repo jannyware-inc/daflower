@@ -253,7 +253,7 @@ if (state == enemy_states.alive){
 	if(state_timeup == 0){
 		substate = penguin_states.normal;
 		substate_timeup = 0;
-		sprite_index = spr_penguin_slide;
+		//sprite_index = spr_penguin_slide;
 		image_index = 0;
 		var _place_found = false;
 		var _camy = camera_get_view_y(view_camera[0]);

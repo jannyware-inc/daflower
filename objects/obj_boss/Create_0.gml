@@ -2,6 +2,9 @@ event_inherited();
 image_index = 0;
 image_speed = 0;
 
+playedtext = false;
+beenhit = false;
+
 
 grounded = false;
 grounded_ramp_id = false;

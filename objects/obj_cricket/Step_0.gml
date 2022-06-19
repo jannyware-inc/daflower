@@ -208,9 +208,9 @@ if (state == enemy_states.alive){
 	
 	/* Draw helper */
 	if(grounded){
-		sprite_index = spr_ladybug_walk;
+		sprite_index = spr_cricket_walk;
 	} else {
-		sprite_index = spr_ladybug_fly;
+		sprite_index = spr_cricket_fly;
 	}
 } else if(state == enemy_states.dead) {
 	if(state_timeup == 0){
@@ -248,7 +248,7 @@ if (state == enemy_states.alive){
 } else if (state == enemy_states.respawn){
 	/* Look for a place to respawn */
 	if(state_timeup == 0){
-		sprite_index = spr_ladybug_fly;
+		sprite_index = spr_cricket_fly;
 		var _place_found = false;
 		var _camy = camera_get_view_y(view_camera[0]);
 		while(!_place_found){

@@ -15,9 +15,21 @@ var _player = instance_place(x, y, obj_player);
     }
 
 
-
-if place_meeting(x,y,obj_wall){ 
-    var inst = instance_create_layer(x,y,"animations", obj_particles)
-    
+if (x < CAM_X) {
+    instance_destroy();   
+}
+if (x > CAM_X+CAM_W){
+    instance_destroy();   
+}
+if (y > CAM_Y + CAM_H) {
     instance_destroy();
 }
+if (y < CAM_Y) {
+    instance_destroy();   
+}
+
+//if place_meeting(x,y,obj_wall){ 
+//    var inst = instance_create_layer(x,y,"animations", obj_particles)
+    
+ //   instance_destroy();
+//}

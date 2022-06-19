@@ -24,6 +24,7 @@ if state = enemy_states.alive{
     
     if count == 80{
         var inst = instance_create_layer(x,y-6,"instances", obj_inkblot);
+        audio_play_sound(snd_fireink, 0, false);
         
         with (inst){
             direction = point_direction (x ,y, obj_player.x, obj_player.y-6);

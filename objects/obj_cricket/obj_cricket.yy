@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_ladybug_walk",
-    "path": "sprites/spr_ladybug_walk/spr_ladybug_walk.yy",
+    "name": "spr_cricket_walk",
+    "path": "sprites/spr_cricket_walk/spr_cricket_walk.yy",
   },
   "solid": false,
   "visible": true,
