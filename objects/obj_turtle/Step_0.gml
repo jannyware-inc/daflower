@@ -67,11 +67,13 @@ if (state == enemy_states.alive){
 			substate = turtle_states.walled;
 			substate_timeup = 0;
 			yvel = 0;
+			/*
 			var inst = instance_create_depth(x + sign(image_xscale) * 5, y - 3, depth -1, obj_flash);
 			with (inst){
                 image_xscale= 0.5;
                 image_yscale = 0.5;
             }
+			*/
             //screen_shake(4,1);
 		} else {
 			xvel = movespd * image_xscale;
@@ -86,7 +88,7 @@ if (state == enemy_states.alive){
 		if(substate_timeup == 0){
 			play_sfx(snd_crash);
 		}
-		if(substate_timeup >= 25){
+		if(substate_timeup >= 3){
             image_index= 0;
 			image_xscale *= -1;
 			substate = turtle_states.normal;

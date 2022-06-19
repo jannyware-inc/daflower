@@ -18,7 +18,7 @@ if(playerindex == 0){
 var alph = draw_get_alpha();
 
 if(global.game_cutscene == 0){
-    
+    watertime = 60;
     if watertime > 0 && watertime < 60 {
         draw_set_alpha(watertime/60);   
     }

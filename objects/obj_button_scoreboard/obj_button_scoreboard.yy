@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_btn_scoreboard",
-    "path": "sprites/spr_btn_scoreboard/spr_btn_scoreboard.yy",
+    "name": "spr_btn2_scoreboard",
+    "path": "sprites/spr_btn2_scoreboard/spr_btn2_scoreboard.yy",
   },
   "solid": false,
   "visible": true,

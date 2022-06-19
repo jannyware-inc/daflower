@@ -8,3 +8,4 @@ cam_focus_x_from = 0;
 last_cam_x = 0;
 last_cam_y = 0;
 audio_stop_sound(mus_friend_2);
+audio_stop_sound(mus_congratulations_7);

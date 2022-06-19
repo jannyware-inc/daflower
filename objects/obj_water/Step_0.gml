@@ -9,7 +9,7 @@ image_angle = point_direction(0, 0, xvel, yvel);
 
 if(place_meeting(x, y, obj_flowertop)){
 	if(global.player_index == 0){
-		obj_flower.height += .55;
+		obj_flower.height += .7;
 		//obj_flower.height += 2;
 		obj_flower.last_growth = 0;
 	}

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_btn_credits",
-    "path": "sprites/spr_btn_credits/spr_btn_credits.yy",
+    "name": "spr_btn2_credits",
+    "path": "sprites/spr_btn2_credits/spr_btn2_credits.yy",
   },
   "solid": false,
   "visible": true,

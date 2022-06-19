@@ -36,4 +36,5 @@ slidesarray = [
 }
 ];
 
+song = mus_congratulations_7;
 goto_room = RoomEndScreen;

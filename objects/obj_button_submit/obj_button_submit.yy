@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_btn_submit",
-    "path": "sprites/spr_btn_submit/spr_btn_submit.yy",
+    "name": "spr_btn2_submit",
+    "path": "sprites/spr_btn2_submit/spr_btn2_submit.yy",
   },
   "solid": false,
   "visible": true,

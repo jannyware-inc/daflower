@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_btn_time_attack",
-    "path": "sprites/spr_btn_time_attack/spr_btn_time_attack.yy",
+    "name": "spr_btn2_play",
+    "path": "sprites/spr_btn2_play/spr_btn2_play.yy",
   },
   "solid": false,
   "visible": true,

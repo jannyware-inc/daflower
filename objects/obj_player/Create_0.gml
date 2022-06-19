@@ -14,7 +14,7 @@ walk_xdeaccel = .15;
 air_xaccel = .25;
 air_xdeaccel = .15;
 
-max_water = 250;
+max_water = 175;
 water = max_water/2;
 
 grav = .175;

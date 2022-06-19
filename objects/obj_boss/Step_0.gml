@@ -43,7 +43,7 @@ if state = enemy_states.alive{
     
     if !playedtext{
         if distance_to_object(obj_player) < 120 {
-            var inst = instance_create_layer(x+8,y- 8,"animations", obj_bosstext);
+            //var inst = instance_create_layer(x+8,y- 8,"animations", obj_bosstext);
             playedtext = true;
         }
     }

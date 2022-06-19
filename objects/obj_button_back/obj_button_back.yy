@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_btn_back",
-    "path": "sprites/spr_btn_back/spr_btn_back.yy",
+    "name": "spr_btn2_back",
+    "path": "sprites/spr_btn2_back/spr_btn2_back.yy",
   },
   "solid": false,
   "visible": true,
