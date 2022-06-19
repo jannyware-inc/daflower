@@ -12,5 +12,5 @@ draw_text(256/2, 224 + 50, "karifuuh: @Karifuuh\nLead artist,\nDraws really cool
 draw_text(256/2, 224 + 90, "weewomp:\n Composer, programmer,\nart assist, Florida man");
 draw_text(256/2, 224 + 130, "IJSJE22: @whylo\n Artist, cat astronaut\nIJSJE22#4258 ");
 draw_set_halign(fa_left);
-draw_text(10, 224 + 170, "Special thanks:\nNoblezim711\nYou!");
+draw_text(10, 224 + 170, "Special thanks:\nNoblezim711\nMr.artist\nYou!");
 draw_set_halign(fa_left);
